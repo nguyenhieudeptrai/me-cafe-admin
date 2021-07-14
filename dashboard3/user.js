@@ -10,8 +10,17 @@ function btnSelectType(myTag, type) {
             tagUser.css("display", "block");
             break;
         case 2:
-            tagUser.each( (key, val)=> {
+            tagUser.each((key, val) => {
                 if ($(val).attr("data-user") === "quan") {
+                    $(val).css("display", "block")
+                } else {
+                    $(val).css("display", "none")
+                }
+            })
+            break;
+        case 3:
+            tagUser.each((key, val) => {
+                if ($(val).attr("data-user") == undefined) {
                     $(val).css("display", "block")
                 } else {
                     $(val).css("display", "none")
