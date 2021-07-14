@@ -1,0 +1,2989 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Users Manager</title>
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: Users Manager;
+		--web-view-id: Users_Manager;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Users_Manager;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#Users_Manager {
+		position: absolute;
+		width: 1920px;
+		height: 1080px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		--web-view-name: Users Manager;
+		--web-view-id: Users_Manager;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	#main_bg {
+		fill: rgba(216,216,216,1);
+	}
+	.main_bg {
+		position: absolute;
+		overflow: visible;
+		width: 1920px;
+		height: 1080px;
+		left: 0px;
+		top: 0px;
+	}
+	#bg {
+		fill: rgba(255,255,255,1);
+	}
+	.bg {
+		filter: drop-shadow(0px 5px 25px rgba(82, 87, 93, 0.102));
+		position: absolute;
+		overflow: visible;
+		width: 1305px;
+		height: 877px;
+		left: 555px;
+		top: 169px;
+	}
+	#Line {
+		fill: rgba(235,242,247,1);
+	}
+	.Line {
+		position: absolute;
+		overflow: visible;
+		width: 1170px;
+		height: 3px;
+		left: 585.006px;
+		top: 236.5px;
+	}
+	#Title {
+		left: 585.006px;
+		top: 195.5px;
+		position: absolute;
+		overflow: visible;
+		width: 170px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 24px;
+		color: rgba(51,51,51,1);
+		letter-spacing: 0.3125px;
+	}
+	#info {
+		position: absolute;
+		width: 16.418px;
+		height: 16.419px;
+		left: 1738.17px;
+		top: 203.17px;
+		overflow: visible;
+	}
+	#Path_45 {
+		fill: rgba(179,184,189,1);
+	}
+	.Path_45 {
+		overflow: visible;
+		position: absolute;
+		width: 16.418px;
+		height: 16.419px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Rectangle_33 {
+		fill: rgba(179,184,189,1);
+	}
+	.Rectangle_33 {
+		position: absolute;
+		overflow: visible;
+		width: 1px;
+		height: 5.629px;
+		left: 7.709px;
+		top: 6.538px;
+	}
+	#Rectangle_34 {
+		fill: rgba(179,184,189,1);
+	}
+	.Rectangle_34 {
+		position: absolute;
+		overflow: visible;
+		width: 1px;
+		height: 1.172px;
+		left: 7.709px;
+		top: 4.251px;
+	}
+	#paging {
+		position: absolute;
+		width: 156.022px;
+		height: 24px;
+		left: 1092px;
+		top: 926.6px;
+		overflow: visible;
+	}
+	#Rectangle_113 {
+		fill: rgba(237,159,26,1);
+	}
+	.Rectangle_113 {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 11.411px;
+		top: 0px;
+	}
+	#ID1_________2_________3_______ {
+		left: 19.811px;
+		top: 5.4px;
+		position: absolute;
+		overflow: visible;
+		width: 121px;
+		white-space: nowrap;
+		line-height: 17px;
+		margin-top: -2.5px;
+		text-align: center;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(255,255,255,1);
+		letter-spacing: 0.3125px;
+	}
+	#Path_93 {
+		fill: rgba(125,129,133,1);
+	}
+	.Path_93 {
+		overflow: visible;
+		position: absolute;
+		width: 9.2px;
+		height: 5.622px;
+		transform: translate(0px, 0px) matrix(1,0,0,1,148.6111,9.1888) rotate(-90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	#Path_94 {
+		fill: rgba(227,233,239,1);
+	}
+	.Path_94 {
+		overflow: visible;
+		position: absolute;
+		width: 9.2px;
+		height: 5.622px;
+		transform: translate(0px, 0px) matrix(1,0,0,1,-1.7889,9.1889) rotate(90deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+	}
+	#Users_Manager_Table {
+		position: absolute;
+		width: 1185px;
+		height: 647px;
+		left: 585px;
+		top: 259px;
+		overflow: visible;
+	}
+	#Rectangle_114 {
+		opacity: 0.5;
+		fill: rgba(234,242,255,1);
+	}
+	.Rectangle_114 {
+		position: absolute;
+		overflow: visible;
+		width: 1170px;
+		height: 60px;
+		left: 0px;
+		top: 107px;
+	}
+	#ID2235440_1235440_902654_89731 {
+		left: 1105px;
+		top: 72px;
+		position: absolute;
+		overflow: visible;
+		width: 52px;
+		white-space: nowrap;
+		line-height: 61px;
+		margin-top: -24.5px;
+		text-align: right;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(82,87,93,1);
+	}
+	#ID5_Pht_15_Pht_12__Pht_3__Pht_ {
+		left: 934px;
+		top: 72px;
+		position: absolute;
+		overflow: visible;
+		width: 45px;
+		white-space: nowrap;
+		line-height: 61px;
+		margin-top: -24.5px;
+		text-align: center;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(82,87,93,1);
+	}
+	#titles {
+		position: absolute;
+		width: 1185px;
+		height: 41px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_112 {
+		opacity: 0.5;
+		fill: rgba(227,233,239,1);
+	}
+	.Rectangle_112 {
+		position: absolute;
+		overflow: visible;
+		width: 1170px;
+		height: 41px;
+		left: 0px;
+		top: 0px;
+	}
+	#H_v_tn {
+		left: 107px;
+		top: 11px;
+		position: absolute;
+		overflow: visible;
+		width: 64px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(179,184,189,1);
+	}
+	#Thi_gian_truy_cp {
+		left: 909px;
+		top: 11px;
+		position: absolute;
+		overflow: visible;
+		width: 120px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(179,184,189,1);
+	}
+	#Thit_b {
+		left: 702px;
+		top: 11px;
+		position: absolute;
+		overflow: visible;
+		width: 50px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(179,184,189,1);
+	}
+	#Lt_booking {
+		left: 1097px;
+		top: 11px;
+		position: absolute;
+		overflow: visible;
+		width: 89px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(179,184,189,1);
+	}
+	#Lt_truy_cp {
+		left: 411px;
+		top: 11px;
+		position: absolute;
+		overflow: visible;
+		width: 89px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		color: rgba(179,184,189,1);
+	}
+	#devices {
+		position: absolute;
+		width: 39.708px;
+		height: 561.089px;
+		left: 709px;
+		top: 67px;
+		overflow: visible;
+	}
+	#devices_ {
+		position: absolute;
+		width: 39.708px;
+		height: 18.089px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_86 {
+		fill: rgba(179,184,189,1);
+	}
+	.Path_86 {
+		overflow: visible;
+		position: absolute;
+		width: 14.142px;
+		height: 18px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_87 {
+		fill: rgba(179,184,189,1);
+	}
+	.Path_87 {
+		overflow: visible;
+		position: absolute;
+		width: 15.256px;
+		height: 18.089px;
+		left: 24.452px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#devices_ba {
+		position: absolute;
+		width: 39.708px;
+		height: 18.089px;
+		left: 0px;
+		top: 182px;
+		overflow: visible;
+	}
+	#Path_86_ba {
+		fill: rgba(179,184,189,1);
+	}
+	.Path_86_ba {
+		overflow: visible;
+		position: absolute;
+		width: 14.142px;
+		height: 18px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_87_bb {
+		fill: rgba(179,184,189,1);
+	}
+	.Path_87_bb {
+		overflow: visible;
+		position: absolute;
+		width: 15.256px;
+		height: 18.089px;
+		left: 24.452px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#devices_bc {
+		position: absolute;
+		width: 15.256px;
+		height: 18.089px;
+		left: 12px;
+		top: 361px;
+		overflow: visible;
+	}
+	#Path_87_bd {
+		fill: rgba(179,184,189,1);
+	}
+	.Path_87_bd {
+		overflow: visible;
+		position: absolute;
+		width: 15.256px;
+		height: 18.089px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#devices_be {
+		position: absolute;
+		width: 15.256px;
+		height: 18.089px;
+		left: 12px;
+		top: 61px;
+		overflow: visible;
+	}
+	#Path_87_bf {
+		fill: rgba(179,184,189,1);
+	}
+	.Path_87_bf {
+		overflow: visible;
+		position: absolute;
+		width: 15.256px;
+		height: 18.089px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#devices_bg {
+		position: absolute;
+		width: 15.256px;
+		height: 18.089px;
+		left: 12px;
+		top: 243px;
+		overflow: visible;
+	}
+	#Path_87_bh {
+		fill: rgba(179,184,189,1);
+	}
+	.Path_87_bh {
+		overflow: visible;
+		position: absolute;
+		width: 15.256px;
+		height: 18.089px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#devices_bi {
+		position: absolute;
+		width: 15.256px;
+		height: 18.089px;
+		left: 12px;
+		top: 422px;
+		overflow: visible;
+	}
+	#Path_87_bj {
+		fill: rgba(179,184,189,1);
+	}
+	.Path_87_bj {
+		overflow: visible;
+		position: absolute;
+		width: 15.256px;
+		height: 18.089px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#devices_bk {
+		position: absolute;
+		width: 15.256px;
+		height: 18.089px;
+		left: 12px;
+		top: 543px;
+		overflow: visible;
+	}
+	#Path_87_bl {
+		fill: rgba(179,184,189,1);
+	}
+	.Path_87_bl {
+		overflow: visible;
+		position: absolute;
+		width: 15.256px;
+		height: 18.089px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#devices_bm {
+		position: absolute;
+		width: 14.142px;
+		height: 18px;
+		left: 13px;
+		top: 122px;
+		overflow: visible;
+	}
+	#Path_86_bn {
+		fill: rgba(179,184,189,1);
+	}
+	.Path_86_bn {
+		overflow: visible;
+		position: absolute;
+		width: 14.142px;
+		height: 18px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#devices_bo {
+		position: absolute;
+		width: 14.142px;
+		height: 18px;
+		left: 13px;
+		top: 304px;
+		overflow: visible;
+	}
+	#Path_86_bp {
+		fill: rgba(179,184,189,1);
+	}
+	.Path_86_bp {
+		overflow: visible;
+		position: absolute;
+		width: 14.142px;
+		height: 18px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#devices_bq {
+		position: absolute;
+		width: 14.142px;
+		height: 18px;
+		left: 13px;
+		top: 483px;
+		overflow: visible;
+	}
+	#Path_86_br {
+		fill: rgba(179,184,189,1);
+	}
+	.Path_86_br {
+		overflow: visible;
+		position: absolute;
+		width: 14.142px;
+		height: 18px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#checkbox {
+		position: absolute;
+		width: 24px;
+		height: 565px;
+		left: 14.575px;
+		top: 66px;
+		overflow: visible;
+	}
+	#checkbox_bt {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(80,143,244,1);
+		stroke-width: 8px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.checkbox_bt {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 0px;
+		top: 60px;
+	}
+	#checkbox_bu {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(227,233,239,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.checkbox_bu {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 0px;
+		top: 0px;
+	}
+	#checkbox_bv {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(227,233,239,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.checkbox_bv {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 0px;
+		top: 120px;
+	}
+	#checkbox_bw {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(227,233,239,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.checkbox_bw {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 0px;
+		top: 240px;
+	}
+	#checkbox_bx {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(227,233,239,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.checkbox_bx {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 0px;
+		top: 180px;
+	}
+	#checkbox_by {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(227,233,239,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.checkbox_by {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 0px;
+		top: 301px;
+	}
+	#checkbox_bz {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(227,233,239,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.checkbox_bz {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 0px;
+		top: 361px;
+	}
+	#checkbox_b {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(227,233,239,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.checkbox_b {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 0px;
+		top: 421px;
+	}
+	#checkbox_ca {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(227,233,239,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.checkbox_ca {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 0px;
+		top: 481px;
+	}
+	#checkbox_cb {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(227,233,239,1);
+		stroke-width: 2px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.checkbox_cb {
+		position: absolute;
+		overflow: visible;
+		width: 24px;
+		height: 24px;
+		left: 0px;
+		top: 541px;
+	}
+	#users {
+		position: absolute;
+		width: 430px;
+		height: 596px;
+		left: 54px;
+		top: 51px;
+		overflow: visible;
+	}
+	#User_10 {
+		position: absolute;
+		width: 156px;
+		height: 40px;
+		left: 0px;
+		top: 542.5px;
+		overflow: visible;
+	}
+	#Name {
+		left: 56px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 101px;
+		white-space: nowrap;
+		line-height: 22px;
+		margin-top: -3px;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(82,87,93,1);
+		letter-spacing: 0.3125px;
+	}
+	#UIContainersUser {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#UIContainersUser_background {
+		fill: rgba(0,0,0,0);
+	}
+	.UIContainersUser_background {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Oval_b {
+		fill: rgba(204,204,204,1);
+	}
+	.Oval_b {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval_ca {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#User_9 {
+		position: absolute;
+		width: 238px;
+		height: 40px;
+		left: 0px;
+		top: 482.5px;
+		overflow: visible;
+	}
+	#Name_cc {
+		left: 56px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 183px;
+		white-space: nowrap;
+		line-height: 22px;
+		margin-top: -3px;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(82,87,93,1);
+		letter-spacing: 0.3125px;
+	}
+	#UIContainersUser_cd {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#UIContainersUser_background_ce {
+		fill: rgba(0,0,0,0);
+	}
+	.UIContainersUser_background_ce {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval_cf {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Oval_cg {
+		fill: rgba(204,204,204,1);
+	}
+	.Oval_cg {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#ID09w {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_2 {
+		fill: rgba(27,193,103,1);
+	}
+	.Path_2 {
+		overflow: visible;
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		left: 0.5px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#User_7 {
+		position: absolute;
+		width: 193px;
+		height: 40px;
+		left: 0px;
+		top: 362px;
+		overflow: visible;
+	}
+	#Name_ck {
+		left: 56px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 138px;
+		white-space: nowrap;
+		line-height: 22px;
+		margin-top: -3px;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(82,87,93,1);
+		letter-spacing: 0.3125px;
+	}
+	#UIContainersUser_cl {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#UIContainersUser_background_cm {
+		fill: rgba(0,0,0,0);
+	}
+	.UIContainersUser_background_cm {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval_cn {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Oval_co {
+		fill: rgba(204,204,204,1);
+	}
+	.Oval_co {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval_cp {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#User_6 {
+		position: absolute;
+		width: 187px;
+		height: 40px;
+		left: 0px;
+		top: 302px;
+		overflow: visible;
+	}
+	#Name_cr {
+		left: 56px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 132px;
+		white-space: nowrap;
+		line-height: 22px;
+		margin-top: -3px;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(82,87,93,1);
+		letter-spacing: 0.3125px;
+	}
+	#UIContainersUser_cs {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#UIContainersUser_background_ct {
+		fill: rgba(0,0,0,0);
+	}
+	.UIContainersUser_background_ct {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval_cu {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Oval_cv {
+		fill: rgba(204,204,204,1);
+	}
+	.Oval_cv {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval_cw {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#User_5 {
+		position: absolute;
+		width: 167px;
+		height: 40px;
+		left: 0px;
+		top: 240.5px;
+		overflow: visible;
+	}
+	#Name_cy {
+		left: 56px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 112px;
+		white-space: nowrap;
+		line-height: 22px;
+		margin-top: -3px;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(82,87,93,1);
+		letter-spacing: 0.3125px;
+	}
+	#UIContainersUser_cz {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#UIContainersUser_background_c {
+		fill: rgba(0,0,0,0);
+	}
+	.UIContainersUser_background_c {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval_c {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Oval_da {
+		fill: rgba(204,204,204,1);
+	}
+	.Oval_da {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval_db {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#User_4 {
+		position: absolute;
+		width: 245px;
+		height: 40px;
+		left: 0px;
+		top: 180.5px;
+		overflow: visible;
+	}
+	#Name_c {
+		left: 56px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 190px;
+		white-space: nowrap;
+		line-height: 22px;
+		margin-top: -3px;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(82,87,93,1);
+		letter-spacing: 0.3125px;
+	}
+	#UIContainersUser_c {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#UIContainersUser_background_da {
+		fill: rgba(0,0,0,0);
+	}
+	.UIContainersUser_background_da {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval_dc {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Oval_dd {
+		fill: rgba(204,204,204,1);
+	}
+	.Oval_dd {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#ID30w {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_2_db {
+		fill: rgba(27,193,103,1);
+	}
+	.Path_2_db {
+		overflow: visible;
+		position: absolute;
+		width: 10px;
+		height: 10px;
+		left: 0.5px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#User_3 {
+		position: absolute;
+		width: 235px;
+		height: 40px;
+		left: 0px;
+		top: 120px;
+		overflow: visible;
+	}
+	#Name_dd {
+		left: 56px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 180px;
+		white-space: nowrap;
+		line-height: 22px;
+		margin-top: -3px;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(82,87,93,1);
+		letter-spacing: 0.3125px;
+	}
+	#UIContainersUser_de {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#UIContainersUser_background_df {
+		fill: rgba(0,0,0,0);
+	}
+	.UIContainersUser_background_df {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval_dg {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Oval_dh {
+		fill: rgba(204,204,204,1);
+	}
+	.Oval_dh {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval_di {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Ellipse_1 {
+		fill: rgba(27,193,103,1);
+	}
+	.Ellipse_1 {
+		position: absolute;
+		overflow: visible;
+		width: 10px;
+		height: 10px;
+		left: 0.5px;
+		top: 0.5px;
+	}
+	#User_8 {
+		position: absolute;
+		width: 197px;
+		height: 40px;
+		left: 0px;
+		top: 422px;
+		overflow: visible;
+	}
+	#Name_dl {
+		left: 56px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 142px;
+		white-space: nowrap;
+		line-height: 22px;
+		margin-top: -3px;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(82,87,93,1);
+		letter-spacing: 0.3125px;
+	}
+	#UIContainersUser_dm {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#UIContainersUser_background_dn {
+		fill: rgba(0,0,0,0);
+	}
+	.UIContainersUser_background_dn {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval_do {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Oval_dp {
+		fill: rgba(204,204,204,1);
+	}
+	.Oval_dp {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval_dq {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Ellipse_1_dr {
+		fill: rgba(27,193,103,1);
+	}
+	.Ellipse_1_dr {
+		position: absolute;
+		overflow: visible;
+		width: 10px;
+		height: 10px;
+		left: 0.5px;
+		top: 0.5px;
+	}
+	#User_2 {
+		position: absolute;
+		width: 189px;
+		height: 40px;
+		left: 0px;
+		top: 60px;
+		overflow: visible;
+	}
+	#Name_dt {
+		left: 56px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 134px;
+		white-space: nowrap;
+		line-height: 22px;
+		margin-top: -3px;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(82,87,93,1);
+		letter-spacing: 0.3125px;
+	}
+	#UIContainersUser_du {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#UIContainersUser_background_dv {
+		fill: rgba(0,0,0,0);
+	}
+	.UIContainersUser_background_dv {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval_dw {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Oval_dx {
+		fill: rgba(204,204,204,1);
+	}
+	.Oval_dx {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval_dy {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#User_1 {
+		position: absolute;
+		width: 179px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Name_d {
+		left: 56px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 124px;
+		white-space: nowrap;
+		line-height: 22px;
+		margin-top: -3px;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(82,87,93,1);
+		letter-spacing: 0.3125px;
+	}
+	#UIContainersUser_d {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#UIContainersUser_background_d {
+		fill: rgba(0,0,0,0);
+	}
+	.UIContainersUser_background_d {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval_d {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Oval_ea {
+		fill: rgba(204,204,204,1);
+	}
+	.Oval_ea {
+		position: absolute;
+		overflow: visible;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+	}
+	#Oval_eb {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#ID45k {
+		left: 377.158px;
+		top: 252.5px;
+		position: absolute;
+		overflow: visible;
+		width: 49px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(179,184,189,1);
+		letter-spacing: 0.48611114501953123px;
+	}
+	#ID45k_d {
+		left: 377.158px;
+		top: 554.5px;
+		position: absolute;
+		overflow: visible;
+		width: 49px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(179,184,189,1);
+		letter-spacing: 0.48611114501953123px;
+	}
+	#ID118k {
+		left: 427px;
+		top: 277px;
+		position: absolute;
+		overflow: visible;
+		width: 4px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(138,138,138,1);
+		letter-spacing: 0.48611114501953123px;
+	}
+	#ID118k_d {
+		left: 427px;
+		top: 579px;
+		position: absolute;
+		overflow: visible;
+		width: 4px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(138,138,138,1);
+		letter-spacing: 0.48611114501953123px;
+	}
+	#ID124k {
+		left: 377.158px;
+		top: 192.5px;
+		position: absolute;
+		overflow: visible;
+		width: 49px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(179,184,189,1);
+		letter-spacing: 0.48611114501953123px;
+	}
+	#ID124k_eb {
+		left: 377.158px;
+		top: 494.5px;
+		position: absolute;
+		overflow: visible;
+		width: 49px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(179,184,189,1);
+		letter-spacing: 0.48611114501953123px;
+	}
+	#ID145k {
+		left: 377px;
+		top: 132px;
+		position: absolute;
+		overflow: visible;
+		width: 49px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(179,184,189,1);
+		letter-spacing: 0.48611114501953123px;
+	}
+	#ID145k_ed {
+		left: 377px;
+		top: 434px;
+		position: absolute;
+		overflow: visible;
+		width: 49px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(179,184,189,1);
+		letter-spacing: 0.48611114501953123px;
+	}
+	#ID176k {
+		left: 377px;
+		top: 72px;
+		position: absolute;
+		overflow: visible;
+		width: 49px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(179,184,189,1);
+		letter-spacing: 0.48611114501953123px;
+	}
+	#ID176k_ef {
+		left: 377px;
+		top: 374px;
+		position: absolute;
+		overflow: visible;
+		width: 49px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(179,184,189,1);
+		letter-spacing: 0.48611114501953123px;
+	}
+	#ID211k {
+		left: 377px;
+		top: 12px;
+		position: absolute;
+		overflow: visible;
+		width: 49px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(179,184,189,1);
+		letter-spacing: 0.48611114501953123px;
+	}
+	#ID211k_eh {
+		left: 377px;
+		top: 314px;
+		position: absolute;
+		overflow: visible;
+		width: 49px;
+		white-space: nowrap;
+		text-align: right;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		color: rgba(179,184,189,1);
+		letter-spacing: 0.48611114501953123px;
+	}
+	#sidebar {
+		position: absolute;
+		width: 390px;
+		height: 803px;
+		left: 135px;
+		top: 160px;
+		overflow: visible;
+	}
+	#bg_ej {
+		fill: rgba(255,255,255,1);
+	}
+	.bg_ej {
+		filter: drop-shadow(0px 10px 20px rgba(196, 200, 208, 0.4));
+		position: absolute;
+		overflow: visible;
+		width: 450px;
+		height: 863px;
+		left: 0px;
+		top: 0px;
+	}
+	#Bg_ek {
+		fill: rgba(248,246,207,1);
+	}
+	.Bg_ek {
+		overflow: visible;
+		position: absolute;
+		width: 330px;
+		height: 44px;
+		left: 30.5px;
+		top: 152.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Line_el {
+		fill: rgba(235,242,247,1);
+	}
+	.Line_el {
+		position: absolute;
+		overflow: visible;
+		width: 330px;
+		height: 2px;
+		left: 30px;
+		top: 79.5px;
+	}
+	#Line_em {
+		fill: rgba(235,242,247,1);
+	}
+	.Line_em {
+		position: absolute;
+		overflow: visible;
+		width: 330px;
+		height: 2px;
+		left: 31px;
+		top: 737.5px;
+	}
+	#Menu {
+		left: 88px;
+		top: 397.012px;
+		position: absolute;
+		overflow: visible;
+		width: 81px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(82,87,93,1);
+	}
+	#Menu_eo {
+		left: 88px;
+		top: 336.935px;
+		position: absolute;
+		overflow: visible;
+		width: 62px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(82,87,93,1);
+	}
+	#Menu_ep {
+		left: 88px;
+		top: 164.589px;
+		position: absolute;
+		overflow: visible;
+		width: 90px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(235,150,0,1);
+	}
+	#Menu_eq {
+		left: 88px;
+		top: 280.362px;
+		position: absolute;
+		overflow: visible;
+		width: 173px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(82,87,93,1);
+	}
+	#Menu_er {
+		left: 88px;
+		top: 220.786px;
+		position: absolute;
+		overflow: visible;
+		width: 159px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(82,87,93,1);
+	}
+	#dashboard {
+		position: absolute;
+		width: 30px;
+		height: 22px;
+		left: 46.177px;
+		top: 109.256px;
+		overflow: visible;
+	}
+	#Path_11 {
+		fill: rgba(208,219,229,1);
+	}
+	.Path_11 {
+		overflow: visible;
+		position: absolute;
+		width: 14px;
+		height: 10px;
+		left: 16px;
+		top: 12px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_22 {
+		fill: rgba(208,219,229,1);
+	}
+	.Path_22 {
+		overflow: visible;
+		position: absolute;
+		width: 14px;
+		height: 10px;
+		left: 0px;
+		top: 12px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_20 {
+		fill: rgba(208,219,229,1);
+	}
+	.Path_20 {
+		overflow: visible;
+		position: absolute;
+		width: 14px;
+		height: 10px;
+		left: 16px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_21 {
+		fill: rgba(208,219,229,1);
+	}
+	.Path_21 {
+		overflow: visible;
+		position: absolute;
+		width: 14px;
+		height: 10px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Menu_ex {
+		left: 90px;
+		top: 112.633px;
+		position: absolute;
+		overflow: visible;
+		width: 78px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(82,87,93,1);
+	}
+	#_messages {
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		left: 319.48px;
+		top: 339.93px;
+		overflow: visible;
+	}
+	#Bg_ez {
+		fill: rgba(82,87,93,1);
+	}
+	.Bg_ez {
+		position: absolute;
+		overflow: visible;
+		width: 30px;
+		height: 30px;
+		left: 0px;
+		top: 0px;
+	}
+	#ID0 {
+		left: 0px;
+		top: 6px;
+		position: absolute;
+		overflow: hidden;
+		width: 31px;
+		height: 16px;
+		text-align: center;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		color: rgba(255,255,255,1);
+	}
+	#Name_e {
+		left: 79.5px;
+		top: 33.5px;
+		position: absolute;
+		overflow: visible;
+		width: 105px;
+		white-space: nowrap;
+		line-height: 22px;
+		margin-top: -2px;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 18px;
+		color: rgba(51,51,51,1);
+	}
+	#Profile_image {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 30.5px;
+		top: 25.5px;
+		overflow: visible;
+	}
+	#Menu_e {
+		left: 89.5px;
+		top: 764.466px;
+		position: absolute;
+		overflow: visible;
+		width: 81px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		color: rgba(82,87,93,1);
+		letter-spacing: 0.625px;
+	}
+	#Group_15 {
+		position: absolute;
+		width: 32.436px;
+		height: 26.224px;
+		left: 44px;
+		top: 161.734px;
+		overflow: visible;
+	}
+	#Path_18 {
+		fill: rgba(235,150,0,1);
+	}
+	.Path_18 {
+		overflow: visible;
+		position: absolute;
+		width: 22.487px;
+		height: 14.499px;
+		left: 5.635px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_19 {
+		fill: rgba(235,150,0,1);
+	}
+	.Path_19 {
+		overflow: visible;
+		position: absolute;
+		width: 32.436px;
+		height: 12.647px;
+		left: 0px;
+		top: 13.577px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#messages {
+		position: absolute;
+		width: 38.438px;
+		height: 28.007px;
+		left: 41px;
+		top: 332.766px;
+		overflow: visible;
+	}
+	#Rectangle_13 {
+		fill: rgba(208,219,229,1);
+	}
+	.Rectangle_13 {
+		position: absolute;
+		overflow: visible;
+		width: 17.013px;
+		height: 2.5px;
+		left: 6.55px;
+		top: 11.501px;
+	}
+	#Rectangle_14 {
+		fill: rgba(208,219,229,1);
+	}
+	.Rectangle_14 {
+		position: absolute;
+		overflow: visible;
+		width: 10.102px;
+		height: 2.5px;
+		left: 6.55px;
+		top: 16.046px;
+	}
+	#Rectangle_15 {
+		fill: rgba(208,219,229,1);
+	}
+	.Rectangle_15 {
+		position: absolute;
+		overflow: visible;
+		width: 1.772px;
+		height: 2.5px;
+		left: 18.512px;
+		top: 16.046px;
+	}
+	#Path_23 {
+		fill: rgba(208,219,229,1);
+	}
+	.Path_23 {
+		overflow: visible;
+		position: absolute;
+		width: 38.438px;
+		height: 28.007px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#analytics {
+		position: absolute;
+		width: 36px;
+		height: 36px;
+		left: 42px;
+		top: 268.354px;
+		overflow: visible;
+	}
+	#Path_24 {
+		fill: rgba(208,219,229,1);
+	}
+	.Path_24 {
+		overflow: visible;
+		position: absolute;
+		width: 32.58px;
+		height: 32.58px;
+		left: 0px;
+		top: 3.42px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_25 {
+		fill: rgba(208,219,229,1);
+	}
+	.Path_25 {
+		overflow: visible;
+		position: absolute;
+		width: 18.028px;
+		height: 18.027px;
+		left: 17.972px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#files {
+		position: absolute;
+		width: 28.962px;
+		height: 26.314px;
+		left: 45px;
+		top: 216.526px;
+		overflow: visible;
+	}
+	#Path_26 {
+		fill: rgba(208,219,229,1);
+	}
+	.Path_26 {
+		overflow: visible;
+		position: absolute;
+		width: 28.962px;
+		height: 19.154px;
+		left: 0px;
+		top: 7.16px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Rectangle_17 {
+		fill: rgba(208,219,229,1);
+	}
+	.Rectangle_17 {
+		position: absolute;
+		overflow: visible;
+		width: 10.086px;
+		height: 2.5px;
+		left: 9.438px;
+		top: 12.79px;
+	}
+	#Rectangle_18 {
+		fill: rgba(208,219,229,1);
+	}
+	.Rectangle_18 {
+		position: absolute;
+		overflow: visible;
+		width: 23.925px;
+		height: 2.5px;
+		left: 2.519px;
+		top: 3.58px;
+	}
+	#Rectangle_19 {
+		fill: rgba(208,219,229,1);
+	}
+	.Rectangle_19 {
+		position: absolute;
+		overflow: visible;
+		width: 18.452px;
+		height: 2.5px;
+		left: 5.255px;
+		top: 0px;
+	}
+	#payments {
+		position: absolute;
+		width: 34.466px;
+		height: 22.432px;
+		left: 43px;
+		top: 396.054px;
+		overflow: visible;
+	}
+	#Path_30 {
+		fill: rgba(208,219,229,1);
+	}
+	.Path_30 {
+		overflow: visible;
+		position: absolute;
+		width: 34.466px;
+		height: 22.432px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Rectangle_28 {
+		fill: rgba(208,219,229,1);
+	}
+	.Rectangle_28 {
+		position: absolute;
+		overflow: visible;
+		width: 8.739px;
+		height: 2.5px;
+		left: 20.165px;
+		top: 13.722px;
+	}
+	#loguot {
+		transform: translate(-135px, -102px) matrix(1,0,0,1,180.2281,858.356) rotate(180deg);
+		transform-origin: center;
+		position: absolute;
+		width: 29.81px;
+		height: 28.805px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Path_31 {
+		fill: rgba(208,219,229,1);
+	}
+	.Path_31 {
+		overflow: visible;
+		position: absolute;
+		width: 18.775px;
+		height: 12.46px;
+		left: 11.035px;
+		top: 8.172px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Path_32 {
+		fill: rgba(208,219,229,1);
+	}
+	.Path_32 {
+		overflow: visible;
+		position: absolute;
+		width: 24.313px;
+		height: 28.805px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Header {
+		position: absolute;
+		width: 1649.995px;
+		height: 115px;
+		left: 126px;
+		top: 39px;
+		overflow: visible;
+	}
+	#top_elements {
+		position: absolute;
+		width: 189.077px;
+		height: 50px;
+		left: 1460.918px;
+		top: 59px;
+		overflow: visible;
+	}
+	#search {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Ellipse_7 {
+		fill: rgba(255,255,255,1);
+	}
+	.Ellipse_7 {
+		position: absolute;
+		overflow: visible;
+		width: 50px;
+		height: 50px;
+		left: 0px;
+		top: 0px;
+	}
+	#search_fu {
+		fill: rgba(219,190,0,1);
+	}
+	.search_fu {
+		overflow: visible;
+		position: absolute;
+		width: 26px;
+		height: 25.999px;
+		left: 11.72px;
+		top: 11.72px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#notifications {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		left: 69.539px;
+		top: 0px;
+		display: none;
+		overflow: visible;
+	}
+	#Ellipse_8_fz {
+		fill: rgba(255,255,255,1);
+	}
+	.Ellipse_8_fz {
+		position: absolute;
+		overflow: visible;
+		width: 50px;
+		height: 50px;
+		left: 0px;
+		top: 0px;
+	}
+	#notifications_fx {
+		fill: rgba(208,219,229,1);
+	}
+	.notifications_fx {
+		overflow: visible;
+		position: absolute;
+		width: 24px;
+		height: 26px;
+		left: 12.982px;
+		top: 11.169px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#notifications_fy {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		left: 69.539px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Ellipse_8_fz {
+		fill: rgba(255,255,255,1);
+	}
+	.Ellipse_8_fz {
+		position: absolute;
+		overflow: visible;
+		width: 50px;
+		height: 50px;
+		left: 0px;
+		top: 0px;
+	}
+	#notifications_f {
+		fill: rgba(82,87,93,1);
+	}
+	.notifications_f {
+		overflow: visible;
+		position: absolute;
+		width: 24px;
+		height: 26px;
+		left: 12.982px;
+		top: 11.169px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Ellipse_10 {
+		fill: rgba(27,193,103,1);
+	}
+	.Ellipse_10 {
+		position: absolute;
+		overflow: visible;
+		width: 10px;
+		height: 10px;
+		left: 12.543px;
+		top: 13px;
+	}
+	#profile {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		left: 139.077px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Ellipse_9 {
+		fill: rgba(255,255,255,1);
+	}
+	.Ellipse_9 {
+		position: absolute;
+		overflow: visible;
+		width: 50px;
+		height: 50px;
+		left: 0px;
+		top: 0px;
+	}
+	#profile_f {
+		fill: rgba(219,190,0,1);
+		stroke: rgba(0,0,0,0);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.profile_f {
+		overflow: visible;
+		position: absolute;
+		width: 23.154px;
+		height: 23px;
+		left: 14.063px;
+		top: 14.064px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Logo-PNG {
+		position: absolute;
+		width: 249px;
+		height: 115px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+</style>
+</head>
+<body>
+<div id="Users_Manager">
+	<svg class="main_bg">
+		<rect id="main_bg" rx="0" ry="0" x="0" y="0" width="1920" height="1080">
+		</rect>
+	</svg>
+	<svg class="bg">
+		<rect id="bg" rx="20" ry="20" x="0" y="0" width="1230" height="802">
+		</rect>
+	</svg>
+	<svg class="Line">
+		<rect id="Line" rx="0" ry="0" x="0" y="0" width="1170" height="3">
+		</rect>
+	</svg>
+	<div id="Title">
+		<span>QUẢN LÝ USER</span>
+	</div>
+	<div id="info">
+		<svg class="Path_45" viewBox="627.605 688.195 16.418 16.419">
+			<path id="Path_45" d="M 635.8140258789062 704.614013671875 C 640.3480224609375 704.614013671875 644.0230102539062 700.93798828125 644.0230102539062 696.4039916992188 C 644.0230102539062 691.8699951171875 640.3480224609375 688.1950073242188 635.8140258789062 688.1950073242188 C 631.280029296875 688.1950073242188 627.60498046875 691.8699951171875 627.60498046875 696.4039916992188 C 627.60498046875 700.93798828125 631.280029296875 704.614013671875 635.8140258789062 704.614013671875 Z M 635.8140258789062 689.1950073242188 C 639.7899780273438 689.1950073242188 643.0230102539062 692.4290161132812 643.0230102539062 696.4039916992188 C 643.0230102539062 700.3790283203125 639.7899780273438 703.614013671875 635.8140258789062 703.614013671875 C 631.8389892578125 703.614013671875 628.60498046875 700.3790283203125 628.60498046875 696.4039916992188 C 628.60498046875 692.4290161132812 631.8389892578125 689.1950073242188 635.8140258789062 689.1950073242188 Z">
+			</path>
+		</svg>
+		<svg class="Rectangle_33">
+			<rect id="Rectangle_33" rx="0" ry="0" x="0" y="0" width="1" height="5.629">
+			</rect>
+		</svg>
+		<svg class="Rectangle_34">
+			<rect id="Rectangle_34" rx="0" ry="0" x="0" y="0" width="1" height="1.172">
+			</rect>
+		</svg>
+	</div>
+	<div id="paging" class="paging">
+		<svg class="Rectangle_113">
+			<rect id="Rectangle_113" rx="8" ry="8" x="0" y="0" width="24" height="24">
+			</rect>
+		</svg>
+		<div id="ID1_________2_________3_______">
+			<span>1      </span><span style="color:rgba(82,87,93,1);">   1                2            3         4</span>
+		</div>
+		<svg class="Path_93" viewBox="0 0 9.2 5.622">
+			<path id="Path_93" d="M 4.60028076171875 3.519683837890625 L 1.0552978515625 3.0517578125e-05 L 0 1.051300048828125 L 4.60028076171875 5.622222900390625 L 9.20001220703125 1.051300048828125 L 8.1446533203125 3.0517578125e-05 L 4.60028076171875 3.519683837890625 Z">
+			</path>
+		</svg>
+		<svg class="Path_94" viewBox="0 0 9.2 5.622">
+			<path id="Path_94" d="M 4.60028076171875 3.519683837890625 L 1.0552978515625 3.0517578125e-05 L 0 1.051300048828125 L 4.60028076171875 5.622222900390625 L 9.20001220703125 1.051300048828125 L 8.1446533203125 3.0517578125e-05 L 4.60028076171875 3.519683837890625 Z">
+			</path>
+		</svg>
+	</div>
+	<div id="Users_Manager_Table" class="Users_Manager_Table">
+		<svg class="Rectangle_114">
+			<rect id="Rectangle_114" rx="10" ry="10" x="0" y="0" width="1170" height="60">
+			</rect>
+		</svg>
+		<div id="ID2235440_1235440_902654_89731">
+			<span>2235.440<br/>1235.440<br/>902.654<br/>897.310<br/>733.123<br/>700.005<br/>680.875<br/>510.240<br/>400.200<br/>218.985</span>
+		</div>
+		<div id="ID5_Pht_15_Pht_12__Pht_3__Pht_">
+			<span>5 Phút<br/>15 Phút<br/>12  Phút<br/>3  Phút<br/>3 Phút<br/>20  Phút<br/>5  Phút<br/>4  Phút<br/>13  Phút<br/>25 Phút</span>
+		</div>
+		<div id="titles">
+			<svg class="Rectangle_112">
+				<rect id="Rectangle_112" rx="10" ry="10" x="0" y="0" width="1170" height="41">
+				</rect>
+			</svg>
+			<div id="H_v_tn">
+				<span>Họ và tên</span>
+			</div>
+			<div id="Thi_gian_truy_cp">
+				<span>Thời gian truy cập</span>
+			</div>
+			<div id="Thit_b">
+				<span>Thiết bị</span>
+			</div>
+			<div id="Lt_booking">
+				<span>Lượt booking</span>
+			</div>
+			<div id="Lt_truy_cp">
+				<span>Lượt truy cập</span>
+			</div>
+		</div>
+		<div id="devices">
+			<div id="devices_">
+				<svg class="Path_86" viewBox="4514.289 3038.501 14.142 18">
+					<path id="Path_86" d="M 4526.1640625 3048.013671875 C 4526.1640625 3050.4921875 4528.43115234375 3051.651123046875 4528.43115234375 3051.651123046875 C 4528.43115234375 3051.651123046875 4527.205078125 3056.5009765625 4524.7548828125 3056.5009765625 C 4522.95654296875 3056.5009765625 4523.634765625 3055.82763671875 4521.94091796875 3055.80078125 C 4520.24658203125 3055.773681640625 4520.95068359375 3056.5009765625 4519.046875 3056.5009765625 C 4516.64892578125 3056.5009765625 4511.8935546875 3048.375732421875 4515.7373046875 3044.2138671875 C 4516.2841796875 3043.620361328125 4517.5087890625 3042.97412109375 4518.83740234375 3042.97412109375 C 4520.16796875 3042.97412109375 4520.79345703125 3043.86279296875 4521.626953125 3043.86279296875 C 4522.46240234375 3043.86279296875 4524.0517578125 3042.97412109375 4525.40771484375 3042.97412109375 C 4526.76318359375 3042.97412109375 4528.1181640625 3044.456298828125 4528.1181640625 3044.456298828125 C 4528.1181640625 3044.456298828125 4526.1640625 3045.534423828125 4526.1640625 3048.013671875 Z M 4521.392578125 3042.32763671875 C 4521.392578125 3042.32763671875 4521.47119140625 3040.711181640625 4522.46240234375 3039.68701171875 C 4523.45166015625 3038.663330078125 4524.8857421875 3038.5009765625 4524.8857421875 3038.5009765625 C 4524.8857421875 3038.5009765625 4525.27783203125 3039.767578125 4523.97412109375 3041.115478515625 C 4522.67041015625 3042.462890625 4521.392578125 3042.32763671875 4521.392578125 3042.32763671875 Z">
+					</path>
+				</svg>
+				<svg class="Path_87" viewBox="4511.911 3040.2 15.256 18.089">
+					<path id="Path_87" d="M 4526.126953125 3052.51220703125 C 4525.55224609375 3052.51220703125 4525.0869140625 3052.04150390625 4525.0869140625 3051.46142578125 L 4525.0869140625 3046.968505859375 C 4525.0869140625 3046.388427734375 4525.55224609375 3045.91796875 4526.126953125 3045.91796875 C 4526.701171875 3045.91796875 4527.1669921875 3046.388427734375 4527.1669921875 3046.968505859375 L 4527.1669921875 3051.46142578125 C 4527.1669921875 3052.04150390625 4526.701171875 3052.51220703125 4526.126953125 3052.51220703125 Z M 4523.29541015625 3054.7294921875 L 4522.50244140625 3054.7294921875 C 4522.529296875 3054.822265625 4522.5439453125 3054.91943359375 4522.5439453125 3055.021240234375 L 4522.5439453125 3055.42919921875 L 4522.5439453125 3057.23828125 C 4522.5439453125 3057.818359375 4522.078125 3058.2890625 4521.50390625 3058.2890625 C 4520.92919921875 3058.2890625 4520.4638671875 3057.818359375 4520.4638671875 3057.23828125 L 4520.4638671875 3055.42919921875 L 4520.4638671875 3055.021240234375 C 4520.4638671875 3054.91943359375 4520.478515625 3054.822265625 4520.50537109375 3054.7294921875 L 4518.5732421875 3054.7294921875 C 4518.599609375 3054.822265625 4518.61474609375 3054.91943359375 4518.61474609375 3055.021240234375 L 4518.61474609375 3055.42919921875 L 4518.61474609375 3057.23828125 C 4518.61474609375 3057.818359375 4518.1484375 3058.2890625 4517.57421875 3058.2890625 C 4517 3058.2890625 4516.53369140625 3057.818359375 4516.53369140625 3057.23828125 L 4516.53369140625 3055.42919921875 L 4516.53369140625 3055.021240234375 C 4516.53369140625 3054.91943359375 4516.548828125 3054.822265625 4516.57568359375 3054.7294921875 L 4515.78271484375 3054.7294921875 C 4515.177734375 3054.7294921875 4514.68505859375 3054.231689453125 4514.68505859375 3053.620849609375 L 4514.68505859375 3051.46142578125 L 4514.68505859375 3046.968505859375 L 4514.68505859375 3045.91796875 L 4524.39306640625 3045.91796875 L 4524.39306640625 3046.968505859375 L 4524.39306640625 3051.46142578125 L 4524.39306640625 3053.620849609375 C 4524.39306640625 3054.231689453125 4523.900390625 3054.7294921875 4523.29541015625 3054.7294921875 Z M 4517.15234375 3041.7138671875 L 4516.76416015625 3041.12646484375 L 4516.33251953125 3040.471923828125 C 4516.279296875 3040.390869140625 4516.30029296875 3040.282470703125 4516.38037109375 3040.22900390625 C 4516.4599609375 3040.17529296875 4516.5673828125 3040.197265625 4516.62060546875 3040.27783203125 L 4517.08447265625 3040.980224609375 L 4517.4765625 3041.574462890625 C 4518.10302734375 3041.3291015625 4518.8017578125 3041.191650390625 4519.5390625 3041.191650390625 C 4520.2763671875 3041.191650390625 4520.9755859375 3041.3291015625 4521.6015625 3041.574462890625 L 4521.99365234375 3040.980224609375 L 4522.45751953125 3040.27783203125 C 4522.5107421875 3040.197265625 4522.6181640625 3040.17529296875 4522.6982421875 3040.22900390625 C 4522.77783203125 3040.282470703125 4522.79931640625 3040.390869140625 4522.74609375 3040.471923828125 L 4522.31396484375 3041.12646484375 L 4521.92578125 3041.7138671875 C 4523.3974609375 3042.406494140625 4524.39306640625 3043.717041015625 4524.39306640625 3045.218017578125 L 4514.68505859375 3045.218017578125 C 4514.68505859375 3043.717041015625 4515.6806640625 3042.406494140625 4517.15234375 3041.7138671875 Z M 4521.61962890625 3043.81787109375 C 4521.90625 3043.81787109375 4522.1396484375 3043.58203125 4522.1396484375 3043.292236328125 C 4522.1396484375 3043.001953125 4521.90625 3042.7666015625 4521.61962890625 3042.7666015625 C 4521.33251953125 3042.7666015625 4521.099609375 3043.001953125 4521.099609375 3043.292236328125 C 4521.099609375 3043.58203125 4521.33251953125 3043.81787109375 4521.61962890625 3043.81787109375 Z M 4517.458984375 3043.81787109375 C 4517.74609375 3043.81787109375 4517.97900390625 3043.58203125 4517.97900390625 3043.292236328125 C 4517.97900390625 3043.001953125 4517.74609375 3042.7666015625 4517.458984375 3042.7666015625 C 4517.17138671875 3042.7666015625 4516.9384765625 3043.001953125 4516.9384765625 3043.292236328125 C 4516.9384765625 3043.58203125 4517.17138671875 3043.81787109375 4517.458984375 3043.81787109375 Z M 4512.951171875 3052.51220703125 C 4512.376953125 3052.51220703125 4511.9111328125 3052.04150390625 4511.9111328125 3051.46142578125 L 4511.9111328125 3046.968505859375 C 4511.9111328125 3046.388427734375 4512.376953125 3045.91796875 4512.951171875 3045.91796875 C 4513.52587890625 3045.91796875 4513.99169921875 3046.388427734375 4513.99169921875 3046.968505859375 L 4513.99169921875 3051.46142578125 C 4513.99169921875 3052.04150390625 4513.52587890625 3052.51220703125 4512.951171875 3052.51220703125 Z">
+					</path>
+				</svg>
+			</div>
+			<div id="devices_ba">
+				<svg class="Path_86_ba" viewBox="4514.289 3038.501 14.142 18">
+					<path id="Path_86_ba" d="M 4526.1640625 3048.013671875 C 4526.1640625 3050.4921875 4528.43115234375 3051.651123046875 4528.43115234375 3051.651123046875 C 4528.43115234375 3051.651123046875 4527.205078125 3056.5009765625 4524.7548828125 3056.5009765625 C 4522.95654296875 3056.5009765625 4523.634765625 3055.82763671875 4521.94091796875 3055.80078125 C 4520.24658203125 3055.773681640625 4520.95068359375 3056.5009765625 4519.046875 3056.5009765625 C 4516.64892578125 3056.5009765625 4511.8935546875 3048.375732421875 4515.7373046875 3044.2138671875 C 4516.2841796875 3043.620361328125 4517.5087890625 3042.97412109375 4518.83740234375 3042.97412109375 C 4520.16796875 3042.97412109375 4520.79345703125 3043.86279296875 4521.626953125 3043.86279296875 C 4522.46240234375 3043.86279296875 4524.0517578125 3042.97412109375 4525.40771484375 3042.97412109375 C 4526.76318359375 3042.97412109375 4528.1181640625 3044.456298828125 4528.1181640625 3044.456298828125 C 4528.1181640625 3044.456298828125 4526.1640625 3045.534423828125 4526.1640625 3048.013671875 Z M 4521.392578125 3042.32763671875 C 4521.392578125 3042.32763671875 4521.47119140625 3040.711181640625 4522.46240234375 3039.68701171875 C 4523.45166015625 3038.663330078125 4524.8857421875 3038.5009765625 4524.8857421875 3038.5009765625 C 4524.8857421875 3038.5009765625 4525.27783203125 3039.767578125 4523.97412109375 3041.115478515625 C 4522.67041015625 3042.462890625 4521.392578125 3042.32763671875 4521.392578125 3042.32763671875 Z">
+					</path>
+				</svg>
+				<svg class="Path_87_bb" viewBox="4511.911 3040.2 15.256 18.089">
+					<path id="Path_87_bb" d="M 4526.126953125 3052.51220703125 C 4525.55224609375 3052.51220703125 4525.0869140625 3052.04150390625 4525.0869140625 3051.46142578125 L 4525.0869140625 3046.968505859375 C 4525.0869140625 3046.388427734375 4525.55224609375 3045.91796875 4526.126953125 3045.91796875 C 4526.701171875 3045.91796875 4527.1669921875 3046.388427734375 4527.1669921875 3046.968505859375 L 4527.1669921875 3051.46142578125 C 4527.1669921875 3052.04150390625 4526.701171875 3052.51220703125 4526.126953125 3052.51220703125 Z M 4523.29541015625 3054.7294921875 L 4522.50244140625 3054.7294921875 C 4522.529296875 3054.822265625 4522.5439453125 3054.91943359375 4522.5439453125 3055.021240234375 L 4522.5439453125 3055.42919921875 L 4522.5439453125 3057.23828125 C 4522.5439453125 3057.818359375 4522.078125 3058.2890625 4521.50390625 3058.2890625 C 4520.92919921875 3058.2890625 4520.4638671875 3057.818359375 4520.4638671875 3057.23828125 L 4520.4638671875 3055.42919921875 L 4520.4638671875 3055.021240234375 C 4520.4638671875 3054.91943359375 4520.478515625 3054.822265625 4520.50537109375 3054.7294921875 L 4518.5732421875 3054.7294921875 C 4518.599609375 3054.822265625 4518.61474609375 3054.91943359375 4518.61474609375 3055.021240234375 L 4518.61474609375 3055.42919921875 L 4518.61474609375 3057.23828125 C 4518.61474609375 3057.818359375 4518.1484375 3058.2890625 4517.57421875 3058.2890625 C 4517 3058.2890625 4516.53369140625 3057.818359375 4516.53369140625 3057.23828125 L 4516.53369140625 3055.42919921875 L 4516.53369140625 3055.021240234375 C 4516.53369140625 3054.91943359375 4516.548828125 3054.822265625 4516.57568359375 3054.7294921875 L 4515.78271484375 3054.7294921875 C 4515.177734375 3054.7294921875 4514.68505859375 3054.231689453125 4514.68505859375 3053.620849609375 L 4514.68505859375 3051.46142578125 L 4514.68505859375 3046.968505859375 L 4514.68505859375 3045.91796875 L 4524.39306640625 3045.91796875 L 4524.39306640625 3046.968505859375 L 4524.39306640625 3051.46142578125 L 4524.39306640625 3053.620849609375 C 4524.39306640625 3054.231689453125 4523.900390625 3054.7294921875 4523.29541015625 3054.7294921875 Z M 4517.15234375 3041.7138671875 L 4516.76416015625 3041.12646484375 L 4516.33251953125 3040.471923828125 C 4516.279296875 3040.390869140625 4516.30029296875 3040.282470703125 4516.38037109375 3040.22900390625 C 4516.4599609375 3040.17529296875 4516.5673828125 3040.197265625 4516.62060546875 3040.27783203125 L 4517.08447265625 3040.980224609375 L 4517.4765625 3041.574462890625 C 4518.10302734375 3041.3291015625 4518.8017578125 3041.191650390625 4519.5390625 3041.191650390625 C 4520.2763671875 3041.191650390625 4520.9755859375 3041.3291015625 4521.6015625 3041.574462890625 L 4521.99365234375 3040.980224609375 L 4522.45751953125 3040.27783203125 C 4522.5107421875 3040.197265625 4522.6181640625 3040.17529296875 4522.6982421875 3040.22900390625 C 4522.77783203125 3040.282470703125 4522.79931640625 3040.390869140625 4522.74609375 3040.471923828125 L 4522.31396484375 3041.12646484375 L 4521.92578125 3041.7138671875 C 4523.3974609375 3042.406494140625 4524.39306640625 3043.717041015625 4524.39306640625 3045.218017578125 L 4514.68505859375 3045.218017578125 C 4514.68505859375 3043.717041015625 4515.6806640625 3042.406494140625 4517.15234375 3041.7138671875 Z M 4521.61962890625 3043.81787109375 C 4521.90625 3043.81787109375 4522.1396484375 3043.58203125 4522.1396484375 3043.292236328125 C 4522.1396484375 3043.001953125 4521.90625 3042.7666015625 4521.61962890625 3042.7666015625 C 4521.33251953125 3042.7666015625 4521.099609375 3043.001953125 4521.099609375 3043.292236328125 C 4521.099609375 3043.58203125 4521.33251953125 3043.81787109375 4521.61962890625 3043.81787109375 Z M 4517.458984375 3043.81787109375 C 4517.74609375 3043.81787109375 4517.97900390625 3043.58203125 4517.97900390625 3043.292236328125 C 4517.97900390625 3043.001953125 4517.74609375 3042.7666015625 4517.458984375 3042.7666015625 C 4517.17138671875 3042.7666015625 4516.9384765625 3043.001953125 4516.9384765625 3043.292236328125 C 4516.9384765625 3043.58203125 4517.17138671875 3043.81787109375 4517.458984375 3043.81787109375 Z M 4512.951171875 3052.51220703125 C 4512.376953125 3052.51220703125 4511.9111328125 3052.04150390625 4511.9111328125 3051.46142578125 L 4511.9111328125 3046.968505859375 C 4511.9111328125 3046.388427734375 4512.376953125 3045.91796875 4512.951171875 3045.91796875 C 4513.52587890625 3045.91796875 4513.99169921875 3046.388427734375 4513.99169921875 3046.968505859375 L 4513.99169921875 3051.46142578125 C 4513.99169921875 3052.04150390625 4513.52587890625 3052.51220703125 4512.951171875 3052.51220703125 Z">
+					</path>
+				</svg>
+			</div>
+			<div id="devices_bc">
+				<svg class="Path_87_bd" viewBox="4511.911 3040.2 15.256 18.089">
+					<path id="Path_87_bd" d="M 4526.126953125 3052.51220703125 C 4525.55224609375 3052.51220703125 4525.0869140625 3052.04150390625 4525.0869140625 3051.46142578125 L 4525.0869140625 3046.968505859375 C 4525.0869140625 3046.388427734375 4525.55224609375 3045.91796875 4526.126953125 3045.91796875 C 4526.701171875 3045.91796875 4527.1669921875 3046.388427734375 4527.1669921875 3046.968505859375 L 4527.1669921875 3051.46142578125 C 4527.1669921875 3052.04150390625 4526.701171875 3052.51220703125 4526.126953125 3052.51220703125 Z M 4523.29541015625 3054.7294921875 L 4522.50244140625 3054.7294921875 C 4522.529296875 3054.822265625 4522.5439453125 3054.91943359375 4522.5439453125 3055.021240234375 L 4522.5439453125 3055.42919921875 L 4522.5439453125 3057.23828125 C 4522.5439453125 3057.818359375 4522.078125 3058.2890625 4521.50390625 3058.2890625 C 4520.92919921875 3058.2890625 4520.4638671875 3057.818359375 4520.4638671875 3057.23828125 L 4520.4638671875 3055.42919921875 L 4520.4638671875 3055.021240234375 C 4520.4638671875 3054.91943359375 4520.478515625 3054.822265625 4520.50537109375 3054.7294921875 L 4518.5732421875 3054.7294921875 C 4518.599609375 3054.822265625 4518.61474609375 3054.91943359375 4518.61474609375 3055.021240234375 L 4518.61474609375 3055.42919921875 L 4518.61474609375 3057.23828125 C 4518.61474609375 3057.818359375 4518.1484375 3058.2890625 4517.57421875 3058.2890625 C 4517 3058.2890625 4516.53369140625 3057.818359375 4516.53369140625 3057.23828125 L 4516.53369140625 3055.42919921875 L 4516.53369140625 3055.021240234375 C 4516.53369140625 3054.91943359375 4516.548828125 3054.822265625 4516.57568359375 3054.7294921875 L 4515.78271484375 3054.7294921875 C 4515.177734375 3054.7294921875 4514.68505859375 3054.231689453125 4514.68505859375 3053.620849609375 L 4514.68505859375 3051.46142578125 L 4514.68505859375 3046.968505859375 L 4514.68505859375 3045.91796875 L 4524.39306640625 3045.91796875 L 4524.39306640625 3046.968505859375 L 4524.39306640625 3051.46142578125 L 4524.39306640625 3053.620849609375 C 4524.39306640625 3054.231689453125 4523.900390625 3054.7294921875 4523.29541015625 3054.7294921875 Z M 4517.15234375 3041.7138671875 L 4516.76416015625 3041.12646484375 L 4516.33251953125 3040.471923828125 C 4516.279296875 3040.390869140625 4516.30029296875 3040.282470703125 4516.38037109375 3040.22900390625 C 4516.4599609375 3040.17529296875 4516.5673828125 3040.197265625 4516.62060546875 3040.27783203125 L 4517.08447265625 3040.980224609375 L 4517.4765625 3041.574462890625 C 4518.10302734375 3041.3291015625 4518.8017578125 3041.191650390625 4519.5390625 3041.191650390625 C 4520.2763671875 3041.191650390625 4520.9755859375 3041.3291015625 4521.6015625 3041.574462890625 L 4521.99365234375 3040.980224609375 L 4522.45751953125 3040.27783203125 C 4522.5107421875 3040.197265625 4522.6181640625 3040.17529296875 4522.6982421875 3040.22900390625 C 4522.77783203125 3040.282470703125 4522.79931640625 3040.390869140625 4522.74609375 3040.471923828125 L 4522.31396484375 3041.12646484375 L 4521.92578125 3041.7138671875 C 4523.3974609375 3042.406494140625 4524.39306640625 3043.717041015625 4524.39306640625 3045.218017578125 L 4514.68505859375 3045.218017578125 C 4514.68505859375 3043.717041015625 4515.6806640625 3042.406494140625 4517.15234375 3041.7138671875 Z M 4521.61962890625 3043.81787109375 C 4521.90625 3043.81787109375 4522.1396484375 3043.58203125 4522.1396484375 3043.292236328125 C 4522.1396484375 3043.001953125 4521.90625 3042.7666015625 4521.61962890625 3042.7666015625 C 4521.33251953125 3042.7666015625 4521.099609375 3043.001953125 4521.099609375 3043.292236328125 C 4521.099609375 3043.58203125 4521.33251953125 3043.81787109375 4521.61962890625 3043.81787109375 Z M 4517.458984375 3043.81787109375 C 4517.74609375 3043.81787109375 4517.97900390625 3043.58203125 4517.97900390625 3043.292236328125 C 4517.97900390625 3043.001953125 4517.74609375 3042.7666015625 4517.458984375 3042.7666015625 C 4517.17138671875 3042.7666015625 4516.9384765625 3043.001953125 4516.9384765625 3043.292236328125 C 4516.9384765625 3043.58203125 4517.17138671875 3043.81787109375 4517.458984375 3043.81787109375 Z M 4512.951171875 3052.51220703125 C 4512.376953125 3052.51220703125 4511.9111328125 3052.04150390625 4511.9111328125 3051.46142578125 L 4511.9111328125 3046.968505859375 C 4511.9111328125 3046.388427734375 4512.376953125 3045.91796875 4512.951171875 3045.91796875 C 4513.52587890625 3045.91796875 4513.99169921875 3046.388427734375 4513.99169921875 3046.968505859375 L 4513.99169921875 3051.46142578125 C 4513.99169921875 3052.04150390625 4513.52587890625 3052.51220703125 4512.951171875 3052.51220703125 Z">
+					</path>
+				</svg>
+			</div>
+			<div id="devices_be">
+				<svg class="Path_87_bf" viewBox="4511.911 3040.2 15.256 18.089">
+					<path id="Path_87_bf" d="M 4526.126953125 3052.51220703125 C 4525.55224609375 3052.51220703125 4525.0869140625 3052.04150390625 4525.0869140625 3051.46142578125 L 4525.0869140625 3046.968505859375 C 4525.0869140625 3046.388427734375 4525.55224609375 3045.91796875 4526.126953125 3045.91796875 C 4526.701171875 3045.91796875 4527.1669921875 3046.388427734375 4527.1669921875 3046.968505859375 L 4527.1669921875 3051.46142578125 C 4527.1669921875 3052.04150390625 4526.701171875 3052.51220703125 4526.126953125 3052.51220703125 Z M 4523.29541015625 3054.7294921875 L 4522.50244140625 3054.7294921875 C 4522.529296875 3054.822265625 4522.5439453125 3054.91943359375 4522.5439453125 3055.021240234375 L 4522.5439453125 3055.42919921875 L 4522.5439453125 3057.23828125 C 4522.5439453125 3057.818359375 4522.078125 3058.2890625 4521.50390625 3058.2890625 C 4520.92919921875 3058.2890625 4520.4638671875 3057.818359375 4520.4638671875 3057.23828125 L 4520.4638671875 3055.42919921875 L 4520.4638671875 3055.021240234375 C 4520.4638671875 3054.91943359375 4520.478515625 3054.822265625 4520.50537109375 3054.7294921875 L 4518.5732421875 3054.7294921875 C 4518.599609375 3054.822265625 4518.61474609375 3054.91943359375 4518.61474609375 3055.021240234375 L 4518.61474609375 3055.42919921875 L 4518.61474609375 3057.23828125 C 4518.61474609375 3057.818359375 4518.1484375 3058.2890625 4517.57421875 3058.2890625 C 4517 3058.2890625 4516.53369140625 3057.818359375 4516.53369140625 3057.23828125 L 4516.53369140625 3055.42919921875 L 4516.53369140625 3055.021240234375 C 4516.53369140625 3054.91943359375 4516.548828125 3054.822265625 4516.57568359375 3054.7294921875 L 4515.78271484375 3054.7294921875 C 4515.177734375 3054.7294921875 4514.68505859375 3054.231689453125 4514.68505859375 3053.620849609375 L 4514.68505859375 3051.46142578125 L 4514.68505859375 3046.968505859375 L 4514.68505859375 3045.91796875 L 4524.39306640625 3045.91796875 L 4524.39306640625 3046.968505859375 L 4524.39306640625 3051.46142578125 L 4524.39306640625 3053.620849609375 C 4524.39306640625 3054.231689453125 4523.900390625 3054.7294921875 4523.29541015625 3054.7294921875 Z M 4517.15234375 3041.7138671875 L 4516.76416015625 3041.12646484375 L 4516.33251953125 3040.471923828125 C 4516.279296875 3040.390869140625 4516.30029296875 3040.282470703125 4516.38037109375 3040.22900390625 C 4516.4599609375 3040.17529296875 4516.5673828125 3040.197265625 4516.62060546875 3040.27783203125 L 4517.08447265625 3040.980224609375 L 4517.4765625 3041.574462890625 C 4518.10302734375 3041.3291015625 4518.8017578125 3041.191650390625 4519.5390625 3041.191650390625 C 4520.2763671875 3041.191650390625 4520.9755859375 3041.3291015625 4521.6015625 3041.574462890625 L 4521.99365234375 3040.980224609375 L 4522.45751953125 3040.27783203125 C 4522.5107421875 3040.197265625 4522.6181640625 3040.17529296875 4522.6982421875 3040.22900390625 C 4522.77783203125 3040.282470703125 4522.79931640625 3040.390869140625 4522.74609375 3040.471923828125 L 4522.31396484375 3041.12646484375 L 4521.92578125 3041.7138671875 C 4523.3974609375 3042.406494140625 4524.39306640625 3043.717041015625 4524.39306640625 3045.218017578125 L 4514.68505859375 3045.218017578125 C 4514.68505859375 3043.717041015625 4515.6806640625 3042.406494140625 4517.15234375 3041.7138671875 Z M 4521.61962890625 3043.81787109375 C 4521.90625 3043.81787109375 4522.1396484375 3043.58203125 4522.1396484375 3043.292236328125 C 4522.1396484375 3043.001953125 4521.90625 3042.7666015625 4521.61962890625 3042.7666015625 C 4521.33251953125 3042.7666015625 4521.099609375 3043.001953125 4521.099609375 3043.292236328125 C 4521.099609375 3043.58203125 4521.33251953125 3043.81787109375 4521.61962890625 3043.81787109375 Z M 4517.458984375 3043.81787109375 C 4517.74609375 3043.81787109375 4517.97900390625 3043.58203125 4517.97900390625 3043.292236328125 C 4517.97900390625 3043.001953125 4517.74609375 3042.7666015625 4517.458984375 3042.7666015625 C 4517.17138671875 3042.7666015625 4516.9384765625 3043.001953125 4516.9384765625 3043.292236328125 C 4516.9384765625 3043.58203125 4517.17138671875 3043.81787109375 4517.458984375 3043.81787109375 Z M 4512.951171875 3052.51220703125 C 4512.376953125 3052.51220703125 4511.9111328125 3052.04150390625 4511.9111328125 3051.46142578125 L 4511.9111328125 3046.968505859375 C 4511.9111328125 3046.388427734375 4512.376953125 3045.91796875 4512.951171875 3045.91796875 C 4513.52587890625 3045.91796875 4513.99169921875 3046.388427734375 4513.99169921875 3046.968505859375 L 4513.99169921875 3051.46142578125 C 4513.99169921875 3052.04150390625 4513.52587890625 3052.51220703125 4512.951171875 3052.51220703125 Z">
+					</path>
+				</svg>
+			</div>
+			<div id="devices_bg">
+				<svg class="Path_87_bh" viewBox="4511.911 3040.2 15.256 18.089">
+					<path id="Path_87_bh" d="M 4526.126953125 3052.51220703125 C 4525.55224609375 3052.51220703125 4525.0869140625 3052.04150390625 4525.0869140625 3051.46142578125 L 4525.0869140625 3046.968505859375 C 4525.0869140625 3046.388427734375 4525.55224609375 3045.91796875 4526.126953125 3045.91796875 C 4526.701171875 3045.91796875 4527.1669921875 3046.388427734375 4527.1669921875 3046.968505859375 L 4527.1669921875 3051.46142578125 C 4527.1669921875 3052.04150390625 4526.701171875 3052.51220703125 4526.126953125 3052.51220703125 Z M 4523.29541015625 3054.7294921875 L 4522.50244140625 3054.7294921875 C 4522.529296875 3054.822265625 4522.5439453125 3054.91943359375 4522.5439453125 3055.021240234375 L 4522.5439453125 3055.42919921875 L 4522.5439453125 3057.23828125 C 4522.5439453125 3057.818359375 4522.078125 3058.2890625 4521.50390625 3058.2890625 C 4520.92919921875 3058.2890625 4520.4638671875 3057.818359375 4520.4638671875 3057.23828125 L 4520.4638671875 3055.42919921875 L 4520.4638671875 3055.021240234375 C 4520.4638671875 3054.91943359375 4520.478515625 3054.822265625 4520.50537109375 3054.7294921875 L 4518.5732421875 3054.7294921875 C 4518.599609375 3054.822265625 4518.61474609375 3054.91943359375 4518.61474609375 3055.021240234375 L 4518.61474609375 3055.42919921875 L 4518.61474609375 3057.23828125 C 4518.61474609375 3057.818359375 4518.1484375 3058.2890625 4517.57421875 3058.2890625 C 4517 3058.2890625 4516.53369140625 3057.818359375 4516.53369140625 3057.23828125 L 4516.53369140625 3055.42919921875 L 4516.53369140625 3055.021240234375 C 4516.53369140625 3054.91943359375 4516.548828125 3054.822265625 4516.57568359375 3054.7294921875 L 4515.78271484375 3054.7294921875 C 4515.177734375 3054.7294921875 4514.68505859375 3054.231689453125 4514.68505859375 3053.620849609375 L 4514.68505859375 3051.46142578125 L 4514.68505859375 3046.968505859375 L 4514.68505859375 3045.91796875 L 4524.39306640625 3045.91796875 L 4524.39306640625 3046.968505859375 L 4524.39306640625 3051.46142578125 L 4524.39306640625 3053.620849609375 C 4524.39306640625 3054.231689453125 4523.900390625 3054.7294921875 4523.29541015625 3054.7294921875 Z M 4517.15234375 3041.7138671875 L 4516.76416015625 3041.12646484375 L 4516.33251953125 3040.471923828125 C 4516.279296875 3040.390869140625 4516.30029296875 3040.282470703125 4516.38037109375 3040.22900390625 C 4516.4599609375 3040.17529296875 4516.5673828125 3040.197265625 4516.62060546875 3040.27783203125 L 4517.08447265625 3040.980224609375 L 4517.4765625 3041.574462890625 C 4518.10302734375 3041.3291015625 4518.8017578125 3041.191650390625 4519.5390625 3041.191650390625 C 4520.2763671875 3041.191650390625 4520.9755859375 3041.3291015625 4521.6015625 3041.574462890625 L 4521.99365234375 3040.980224609375 L 4522.45751953125 3040.27783203125 C 4522.5107421875 3040.197265625 4522.6181640625 3040.17529296875 4522.6982421875 3040.22900390625 C 4522.77783203125 3040.282470703125 4522.79931640625 3040.390869140625 4522.74609375 3040.471923828125 L 4522.31396484375 3041.12646484375 L 4521.92578125 3041.7138671875 C 4523.3974609375 3042.406494140625 4524.39306640625 3043.717041015625 4524.39306640625 3045.218017578125 L 4514.68505859375 3045.218017578125 C 4514.68505859375 3043.717041015625 4515.6806640625 3042.406494140625 4517.15234375 3041.7138671875 Z M 4521.61962890625 3043.81787109375 C 4521.90625 3043.81787109375 4522.1396484375 3043.58203125 4522.1396484375 3043.292236328125 C 4522.1396484375 3043.001953125 4521.90625 3042.7666015625 4521.61962890625 3042.7666015625 C 4521.33251953125 3042.7666015625 4521.099609375 3043.001953125 4521.099609375 3043.292236328125 C 4521.099609375 3043.58203125 4521.33251953125 3043.81787109375 4521.61962890625 3043.81787109375 Z M 4517.458984375 3043.81787109375 C 4517.74609375 3043.81787109375 4517.97900390625 3043.58203125 4517.97900390625 3043.292236328125 C 4517.97900390625 3043.001953125 4517.74609375 3042.7666015625 4517.458984375 3042.7666015625 C 4517.17138671875 3042.7666015625 4516.9384765625 3043.001953125 4516.9384765625 3043.292236328125 C 4516.9384765625 3043.58203125 4517.17138671875 3043.81787109375 4517.458984375 3043.81787109375 Z M 4512.951171875 3052.51220703125 C 4512.376953125 3052.51220703125 4511.9111328125 3052.04150390625 4511.9111328125 3051.46142578125 L 4511.9111328125 3046.968505859375 C 4511.9111328125 3046.388427734375 4512.376953125 3045.91796875 4512.951171875 3045.91796875 C 4513.52587890625 3045.91796875 4513.99169921875 3046.388427734375 4513.99169921875 3046.968505859375 L 4513.99169921875 3051.46142578125 C 4513.99169921875 3052.04150390625 4513.52587890625 3052.51220703125 4512.951171875 3052.51220703125 Z">
+					</path>
+				</svg>
+			</div>
+			<div id="devices_bi">
+				<svg class="Path_87_bj" viewBox="4511.911 3040.2 15.256 18.089">
+					<path id="Path_87_bj" d="M 4526.126953125 3052.51220703125 C 4525.55224609375 3052.51220703125 4525.0869140625 3052.04150390625 4525.0869140625 3051.46142578125 L 4525.0869140625 3046.968505859375 C 4525.0869140625 3046.388427734375 4525.55224609375 3045.91796875 4526.126953125 3045.91796875 C 4526.701171875 3045.91796875 4527.1669921875 3046.388427734375 4527.1669921875 3046.968505859375 L 4527.1669921875 3051.46142578125 C 4527.1669921875 3052.04150390625 4526.701171875 3052.51220703125 4526.126953125 3052.51220703125 Z M 4523.29541015625 3054.7294921875 L 4522.50244140625 3054.7294921875 C 4522.529296875 3054.822265625 4522.5439453125 3054.91943359375 4522.5439453125 3055.021240234375 L 4522.5439453125 3055.42919921875 L 4522.5439453125 3057.23828125 C 4522.5439453125 3057.818359375 4522.078125 3058.2890625 4521.50390625 3058.2890625 C 4520.92919921875 3058.2890625 4520.4638671875 3057.818359375 4520.4638671875 3057.23828125 L 4520.4638671875 3055.42919921875 L 4520.4638671875 3055.021240234375 C 4520.4638671875 3054.91943359375 4520.478515625 3054.822265625 4520.50537109375 3054.7294921875 L 4518.5732421875 3054.7294921875 C 4518.599609375 3054.822265625 4518.61474609375 3054.91943359375 4518.61474609375 3055.021240234375 L 4518.61474609375 3055.42919921875 L 4518.61474609375 3057.23828125 C 4518.61474609375 3057.818359375 4518.1484375 3058.2890625 4517.57421875 3058.2890625 C 4517 3058.2890625 4516.53369140625 3057.818359375 4516.53369140625 3057.23828125 L 4516.53369140625 3055.42919921875 L 4516.53369140625 3055.021240234375 C 4516.53369140625 3054.91943359375 4516.548828125 3054.822265625 4516.57568359375 3054.7294921875 L 4515.78271484375 3054.7294921875 C 4515.177734375 3054.7294921875 4514.68505859375 3054.231689453125 4514.68505859375 3053.620849609375 L 4514.68505859375 3051.46142578125 L 4514.68505859375 3046.968505859375 L 4514.68505859375 3045.91796875 L 4524.39306640625 3045.91796875 L 4524.39306640625 3046.968505859375 L 4524.39306640625 3051.46142578125 L 4524.39306640625 3053.620849609375 C 4524.39306640625 3054.231689453125 4523.900390625 3054.7294921875 4523.29541015625 3054.7294921875 Z M 4517.15234375 3041.7138671875 L 4516.76416015625 3041.12646484375 L 4516.33251953125 3040.471923828125 C 4516.279296875 3040.390869140625 4516.30029296875 3040.282470703125 4516.38037109375 3040.22900390625 C 4516.4599609375 3040.17529296875 4516.5673828125 3040.197265625 4516.62060546875 3040.27783203125 L 4517.08447265625 3040.980224609375 L 4517.4765625 3041.574462890625 C 4518.10302734375 3041.3291015625 4518.8017578125 3041.191650390625 4519.5390625 3041.191650390625 C 4520.2763671875 3041.191650390625 4520.9755859375 3041.3291015625 4521.6015625 3041.574462890625 L 4521.99365234375 3040.980224609375 L 4522.45751953125 3040.27783203125 C 4522.5107421875 3040.197265625 4522.6181640625 3040.17529296875 4522.6982421875 3040.22900390625 C 4522.77783203125 3040.282470703125 4522.79931640625 3040.390869140625 4522.74609375 3040.471923828125 L 4522.31396484375 3041.12646484375 L 4521.92578125 3041.7138671875 C 4523.3974609375 3042.406494140625 4524.39306640625 3043.717041015625 4524.39306640625 3045.218017578125 L 4514.68505859375 3045.218017578125 C 4514.68505859375 3043.717041015625 4515.6806640625 3042.406494140625 4517.15234375 3041.7138671875 Z M 4521.61962890625 3043.81787109375 C 4521.90625 3043.81787109375 4522.1396484375 3043.58203125 4522.1396484375 3043.292236328125 C 4522.1396484375 3043.001953125 4521.90625 3042.7666015625 4521.61962890625 3042.7666015625 C 4521.33251953125 3042.7666015625 4521.099609375 3043.001953125 4521.099609375 3043.292236328125 C 4521.099609375 3043.58203125 4521.33251953125 3043.81787109375 4521.61962890625 3043.81787109375 Z M 4517.458984375 3043.81787109375 C 4517.74609375 3043.81787109375 4517.97900390625 3043.58203125 4517.97900390625 3043.292236328125 C 4517.97900390625 3043.001953125 4517.74609375 3042.7666015625 4517.458984375 3042.7666015625 C 4517.17138671875 3042.7666015625 4516.9384765625 3043.001953125 4516.9384765625 3043.292236328125 C 4516.9384765625 3043.58203125 4517.17138671875 3043.81787109375 4517.458984375 3043.81787109375 Z M 4512.951171875 3052.51220703125 C 4512.376953125 3052.51220703125 4511.9111328125 3052.04150390625 4511.9111328125 3051.46142578125 L 4511.9111328125 3046.968505859375 C 4511.9111328125 3046.388427734375 4512.376953125 3045.91796875 4512.951171875 3045.91796875 C 4513.52587890625 3045.91796875 4513.99169921875 3046.388427734375 4513.99169921875 3046.968505859375 L 4513.99169921875 3051.46142578125 C 4513.99169921875 3052.04150390625 4513.52587890625 3052.51220703125 4512.951171875 3052.51220703125 Z">
+					</path>
+				</svg>
+			</div>
+			<div id="devices_bk">
+				<svg class="Path_87_bl" viewBox="4511.911 3040.2 15.256 18.089">
+					<path id="Path_87_bl" d="M 4526.126953125 3052.51220703125 C 4525.55224609375 3052.51220703125 4525.0869140625 3052.04150390625 4525.0869140625 3051.46142578125 L 4525.0869140625 3046.968505859375 C 4525.0869140625 3046.388427734375 4525.55224609375 3045.91796875 4526.126953125 3045.91796875 C 4526.701171875 3045.91796875 4527.1669921875 3046.388427734375 4527.1669921875 3046.968505859375 L 4527.1669921875 3051.46142578125 C 4527.1669921875 3052.04150390625 4526.701171875 3052.51220703125 4526.126953125 3052.51220703125 Z M 4523.29541015625 3054.7294921875 L 4522.50244140625 3054.7294921875 C 4522.529296875 3054.822265625 4522.5439453125 3054.91943359375 4522.5439453125 3055.021240234375 L 4522.5439453125 3055.42919921875 L 4522.5439453125 3057.23828125 C 4522.5439453125 3057.818359375 4522.078125 3058.2890625 4521.50390625 3058.2890625 C 4520.92919921875 3058.2890625 4520.4638671875 3057.818359375 4520.4638671875 3057.23828125 L 4520.4638671875 3055.42919921875 L 4520.4638671875 3055.021240234375 C 4520.4638671875 3054.91943359375 4520.478515625 3054.822265625 4520.50537109375 3054.7294921875 L 4518.5732421875 3054.7294921875 C 4518.599609375 3054.822265625 4518.61474609375 3054.91943359375 4518.61474609375 3055.021240234375 L 4518.61474609375 3055.42919921875 L 4518.61474609375 3057.23828125 C 4518.61474609375 3057.818359375 4518.1484375 3058.2890625 4517.57421875 3058.2890625 C 4517 3058.2890625 4516.53369140625 3057.818359375 4516.53369140625 3057.23828125 L 4516.53369140625 3055.42919921875 L 4516.53369140625 3055.021240234375 C 4516.53369140625 3054.91943359375 4516.548828125 3054.822265625 4516.57568359375 3054.7294921875 L 4515.78271484375 3054.7294921875 C 4515.177734375 3054.7294921875 4514.68505859375 3054.231689453125 4514.68505859375 3053.620849609375 L 4514.68505859375 3051.46142578125 L 4514.68505859375 3046.968505859375 L 4514.68505859375 3045.91796875 L 4524.39306640625 3045.91796875 L 4524.39306640625 3046.968505859375 L 4524.39306640625 3051.46142578125 L 4524.39306640625 3053.620849609375 C 4524.39306640625 3054.231689453125 4523.900390625 3054.7294921875 4523.29541015625 3054.7294921875 Z M 4517.15234375 3041.7138671875 L 4516.76416015625 3041.12646484375 L 4516.33251953125 3040.471923828125 C 4516.279296875 3040.390869140625 4516.30029296875 3040.282470703125 4516.38037109375 3040.22900390625 C 4516.4599609375 3040.17529296875 4516.5673828125 3040.197265625 4516.62060546875 3040.27783203125 L 4517.08447265625 3040.980224609375 L 4517.4765625 3041.574462890625 C 4518.10302734375 3041.3291015625 4518.8017578125 3041.191650390625 4519.5390625 3041.191650390625 C 4520.2763671875 3041.191650390625 4520.9755859375 3041.3291015625 4521.6015625 3041.574462890625 L 4521.99365234375 3040.980224609375 L 4522.45751953125 3040.27783203125 C 4522.5107421875 3040.197265625 4522.6181640625 3040.17529296875 4522.6982421875 3040.22900390625 C 4522.77783203125 3040.282470703125 4522.79931640625 3040.390869140625 4522.74609375 3040.471923828125 L 4522.31396484375 3041.12646484375 L 4521.92578125 3041.7138671875 C 4523.3974609375 3042.406494140625 4524.39306640625 3043.717041015625 4524.39306640625 3045.218017578125 L 4514.68505859375 3045.218017578125 C 4514.68505859375 3043.717041015625 4515.6806640625 3042.406494140625 4517.15234375 3041.7138671875 Z M 4521.61962890625 3043.81787109375 C 4521.90625 3043.81787109375 4522.1396484375 3043.58203125 4522.1396484375 3043.292236328125 C 4522.1396484375 3043.001953125 4521.90625 3042.7666015625 4521.61962890625 3042.7666015625 C 4521.33251953125 3042.7666015625 4521.099609375 3043.001953125 4521.099609375 3043.292236328125 C 4521.099609375 3043.58203125 4521.33251953125 3043.81787109375 4521.61962890625 3043.81787109375 Z M 4517.458984375 3043.81787109375 C 4517.74609375 3043.81787109375 4517.97900390625 3043.58203125 4517.97900390625 3043.292236328125 C 4517.97900390625 3043.001953125 4517.74609375 3042.7666015625 4517.458984375 3042.7666015625 C 4517.17138671875 3042.7666015625 4516.9384765625 3043.001953125 4516.9384765625 3043.292236328125 C 4516.9384765625 3043.58203125 4517.17138671875 3043.81787109375 4517.458984375 3043.81787109375 Z M 4512.951171875 3052.51220703125 C 4512.376953125 3052.51220703125 4511.9111328125 3052.04150390625 4511.9111328125 3051.46142578125 L 4511.9111328125 3046.968505859375 C 4511.9111328125 3046.388427734375 4512.376953125 3045.91796875 4512.951171875 3045.91796875 C 4513.52587890625 3045.91796875 4513.99169921875 3046.388427734375 4513.99169921875 3046.968505859375 L 4513.99169921875 3051.46142578125 C 4513.99169921875 3052.04150390625 4513.52587890625 3052.51220703125 4512.951171875 3052.51220703125 Z">
+					</path>
+				</svg>
+			</div>
+			<div id="devices_bm">
+				<svg class="Path_86_bn" viewBox="4514.289 3038.501 14.142 18">
+					<path id="Path_86_bn" d="M 4526.1640625 3048.013671875 C 4526.1640625 3050.4921875 4528.43115234375 3051.651123046875 4528.43115234375 3051.651123046875 C 4528.43115234375 3051.651123046875 4527.205078125 3056.5009765625 4524.7548828125 3056.5009765625 C 4522.95654296875 3056.5009765625 4523.634765625 3055.82763671875 4521.94091796875 3055.80078125 C 4520.24658203125 3055.773681640625 4520.95068359375 3056.5009765625 4519.046875 3056.5009765625 C 4516.64892578125 3056.5009765625 4511.8935546875 3048.375732421875 4515.7373046875 3044.2138671875 C 4516.2841796875 3043.620361328125 4517.5087890625 3042.97412109375 4518.83740234375 3042.97412109375 C 4520.16796875 3042.97412109375 4520.79345703125 3043.86279296875 4521.626953125 3043.86279296875 C 4522.46240234375 3043.86279296875 4524.0517578125 3042.97412109375 4525.40771484375 3042.97412109375 C 4526.76318359375 3042.97412109375 4528.1181640625 3044.456298828125 4528.1181640625 3044.456298828125 C 4528.1181640625 3044.456298828125 4526.1640625 3045.534423828125 4526.1640625 3048.013671875 Z M 4521.392578125 3042.32763671875 C 4521.392578125 3042.32763671875 4521.47119140625 3040.711181640625 4522.46240234375 3039.68701171875 C 4523.45166015625 3038.663330078125 4524.8857421875 3038.5009765625 4524.8857421875 3038.5009765625 C 4524.8857421875 3038.5009765625 4525.27783203125 3039.767578125 4523.97412109375 3041.115478515625 C 4522.67041015625 3042.462890625 4521.392578125 3042.32763671875 4521.392578125 3042.32763671875 Z">
+					</path>
+				</svg>
+			</div>
+			<div id="devices_bo">
+				<svg class="Path_86_bp" viewBox="4514.289 3038.501 14.142 18">
+					<path id="Path_86_bp" d="M 4526.1640625 3048.013671875 C 4526.1640625 3050.4921875 4528.43115234375 3051.651123046875 4528.43115234375 3051.651123046875 C 4528.43115234375 3051.651123046875 4527.205078125 3056.5009765625 4524.7548828125 3056.5009765625 C 4522.95654296875 3056.5009765625 4523.634765625 3055.82763671875 4521.94091796875 3055.80078125 C 4520.24658203125 3055.773681640625 4520.95068359375 3056.5009765625 4519.046875 3056.5009765625 C 4516.64892578125 3056.5009765625 4511.8935546875 3048.375732421875 4515.7373046875 3044.2138671875 C 4516.2841796875 3043.620361328125 4517.5087890625 3042.97412109375 4518.83740234375 3042.97412109375 C 4520.16796875 3042.97412109375 4520.79345703125 3043.86279296875 4521.626953125 3043.86279296875 C 4522.46240234375 3043.86279296875 4524.0517578125 3042.97412109375 4525.40771484375 3042.97412109375 C 4526.76318359375 3042.97412109375 4528.1181640625 3044.456298828125 4528.1181640625 3044.456298828125 C 4528.1181640625 3044.456298828125 4526.1640625 3045.534423828125 4526.1640625 3048.013671875 Z M 4521.392578125 3042.32763671875 C 4521.392578125 3042.32763671875 4521.47119140625 3040.711181640625 4522.46240234375 3039.68701171875 C 4523.45166015625 3038.663330078125 4524.8857421875 3038.5009765625 4524.8857421875 3038.5009765625 C 4524.8857421875 3038.5009765625 4525.27783203125 3039.767578125 4523.97412109375 3041.115478515625 C 4522.67041015625 3042.462890625 4521.392578125 3042.32763671875 4521.392578125 3042.32763671875 Z">
+					</path>
+				</svg>
+			</div>
+			<div id="devices_bq">
+				<svg class="Path_86_br" viewBox="4514.289 3038.501 14.142 18">
+					<path id="Path_86_br" d="M 4526.1640625 3048.013671875 C 4526.1640625 3050.4921875 4528.43115234375 3051.651123046875 4528.43115234375 3051.651123046875 C 4528.43115234375 3051.651123046875 4527.205078125 3056.5009765625 4524.7548828125 3056.5009765625 C 4522.95654296875 3056.5009765625 4523.634765625 3055.82763671875 4521.94091796875 3055.80078125 C 4520.24658203125 3055.773681640625 4520.95068359375 3056.5009765625 4519.046875 3056.5009765625 C 4516.64892578125 3056.5009765625 4511.8935546875 3048.375732421875 4515.7373046875 3044.2138671875 C 4516.2841796875 3043.620361328125 4517.5087890625 3042.97412109375 4518.83740234375 3042.97412109375 C 4520.16796875 3042.97412109375 4520.79345703125 3043.86279296875 4521.626953125 3043.86279296875 C 4522.46240234375 3043.86279296875 4524.0517578125 3042.97412109375 4525.40771484375 3042.97412109375 C 4526.76318359375 3042.97412109375 4528.1181640625 3044.456298828125 4528.1181640625 3044.456298828125 C 4528.1181640625 3044.456298828125 4526.1640625 3045.534423828125 4526.1640625 3048.013671875 Z M 4521.392578125 3042.32763671875 C 4521.392578125 3042.32763671875 4521.47119140625 3040.711181640625 4522.46240234375 3039.68701171875 C 4523.45166015625 3038.663330078125 4524.8857421875 3038.5009765625 4524.8857421875 3038.5009765625 C 4524.8857421875 3038.5009765625 4525.27783203125 3039.767578125 4523.97412109375 3041.115478515625 C 4522.67041015625 3042.462890625 4521.392578125 3042.32763671875 4521.392578125 3042.32763671875 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div id="checkbox">
+			<svg class="checkbox_bt">
+				<rect id="checkbox_bt" rx="8" ry="8" x="0" y="0" width="24" height="24">
+				</rect>
+			</svg>
+			<svg class="checkbox_bu">
+				<rect id="checkbox_bu" rx="8" ry="8" x="0" y="0" width="24" height="24">
+				</rect>
+			</svg>
+			<svg class="checkbox_bv">
+				<rect id="checkbox_bv" rx="8" ry="8" x="0" y="0" width="24" height="24">
+				</rect>
+			</svg>
+			<svg class="checkbox_bw">
+				<rect id="checkbox_bw" rx="8" ry="8" x="0" y="0" width="24" height="24">
+				</rect>
+			</svg>
+			<svg class="checkbox_bx">
+				<rect id="checkbox_bx" rx="8" ry="8" x="0" y="0" width="24" height="24">
+				</rect>
+			</svg>
+			<svg class="checkbox_by">
+				<rect id="checkbox_by" rx="8" ry="8" x="0" y="0" width="24" height="24">
+				</rect>
+			</svg>
+			<svg class="checkbox_bz">
+				<rect id="checkbox_bz" rx="8" ry="8" x="0" y="0" width="24" height="24">
+				</rect>
+			</svg>
+			<svg class="checkbox_b">
+				<rect id="checkbox_b" rx="8" ry="8" x="0" y="0" width="24" height="24">
+				</rect>
+			</svg>
+			<svg class="checkbox_ca">
+				<rect id="checkbox_ca" rx="8" ry="8" x="0" y="0" width="24" height="24">
+				</rect>
+			</svg>
+			<svg class="checkbox_cb">
+				<rect id="checkbox_cb" rx="8" ry="8" x="0" y="0" width="24" height="24">
+				</rect>
+			</svg>
+		</div>
+		<div id="users" class="users">
+			<div id="User_10">
+				<div id="Name">
+					<span>Lê Nhật Minh</span>
+				</div>
+				<div id="UIContainersUser">
+					<svg class="UIContainersUser_background">
+						<rect id="UIContainersUser_background" rx="0" ry="0" x="0" y="0" width="40" height="40">
+						</rect>
+					</svg>
+					<div id="Oval">
+						<svg class="Oval_b">
+							<ellipse id="Oval_b" rx="20" ry="20" cx="20" cy="20">
+							</ellipse>
+						</svg>
+						<img id="Oval_ca" src="assets/Oval_ca.png" >
+							
+					</div>
+				</div>
+			</div>
+			<div id="User_9">
+				<div id="Name_cc">
+					<span>Nguyễn Phương Tuệ Nhi</span>
+				</div>
+				<div id="UIContainersUser_cd">
+					<svg class="UIContainersUser_background_ce">
+						<rect id="UIContainersUser_background_ce" rx="0" ry="0" x="0" y="0" width="40" height="40">
+						</rect>
+					</svg>
+					<div id="Oval_cf">
+						<svg class="Oval_cg">
+							<ellipse id="Oval_cg" rx="20" ry="20" cx="20" cy="20">
+							</ellipse>
+						</svg>
+						<img id="ID09w" src="assets/ID09w.png" >
+							
+					</div>
+				</div>
+				<svg class="Path_2" viewBox="0 0 10 10">
+					<path id="Path_2" d="M 5 0 C 7.76142406463623 0 10 2.238576173782349 10 5 C 10 7.76142406463623 7.76142406463623 10 5 10 C 2.238576173782349 10 0 7.76142406463623 0 5 C 0 2.238576173782349 2.238576173782349 0 5 0 Z">
+					</path>
+				</svg>
+			</div>
+			<div id="User_7">
+				<div id="Name_ck">
+					<span>Nguyễn Minh Khôi</span>
+				</div>
+				<div id="UIContainersUser_cl">
+					<svg class="UIContainersUser_background_cm">
+						<rect id="UIContainersUser_background_cm" rx="0" ry="0" x="0" y="0" width="40" height="40">
+						</rect>
+					</svg>
+					<div id="Oval_cn">
+						<svg class="Oval_co">
+							<ellipse id="Oval_co" rx="20" ry="20" cx="20" cy="20">
+							</ellipse>
+						</svg>
+						<img id="Oval_cp" src="assets/Oval_cp.png" >
+							
+					</div>
+				</div>
+			</div>
+			<div id="User_6">
+				<div id="Name_cr">
+					<span>Nguyễn Mai Thảo</span>
+				</div>
+				<div id="UIContainersUser_cs">
+					<svg class="UIContainersUser_background_ct">
+						<rect id="UIContainersUser_background_ct" rx="0" ry="0" x="0" y="0" width="40" height="40">
+						</rect>
+					</svg>
+					<div id="Oval_cu">
+						<svg class="Oval_cv">
+							<ellipse id="Oval_cv" rx="20" ry="20" cx="20" cy="20">
+							</ellipse>
+						</svg>
+						<img id="Oval_cw" src="assets/Oval_cw.png" >
+							
+					</div>
+				</div>
+			</div>
+			<div id="User_5">
+				<div id="Name_cy">
+					<span>Nguyễn Gia An</span>
+				</div>
+				<div id="UIContainersUser_cz">
+					<svg class="UIContainersUser_background_c">
+						<rect id="UIContainersUser_background_c" rx="0" ry="0" x="0" y="0" width="40" height="40">
+						</rect>
+					</svg>
+					<div id="Oval_c">
+						<svg class="Oval_da">
+							<ellipse id="Oval_da" rx="20" ry="20" cx="20" cy="20">
+							</ellipse>
+						</svg>
+						<img id="Oval_db" src="assets/Oval_db.png" >
+							
+					</div>
+				</div>
+			</div>
+			<div id="User_4">
+				<div id="Name_c">
+					<span>Nguyễn Ngọc Thanh Tâm</span>
+				</div>
+				<div id="UIContainersUser_c">
+					<svg class="UIContainersUser_background_da">
+						<rect id="UIContainersUser_background_da" rx="0" ry="0" x="0" y="0" width="40" height="40">
+						</rect>
+					</svg>
+					<div id="Oval_dc">
+						<svg class="Oval_dd">
+							<ellipse id="Oval_dd" rx="20" ry="20" cx="20" cy="20">
+							</ellipse>
+						</svg>
+						<img id="ID30w" src="assets/ID30w.png" >
+							
+					</div>
+				</div>
+				<svg class="Path_2_db" viewBox="0 0 10 10">
+					<path id="Path_2_db" d="M 5 0 C 7.76142406463623 0 10 2.238576173782349 10 5 C 10 7.76142406463623 7.76142406463623 10 5 10 C 2.238576173782349 10 0 7.76142406463623 0 5 C 0 2.238576173782349 2.238576173782349 0 5 0 Z">
+					</path>
+				</svg>
+			</div>
+			<div id="User_3">
+				<div id="Name_dd">
+					<span>Nguyễn Phương Tố Như</span>
+				</div>
+				<div id="UIContainersUser_de">
+					<svg class="UIContainersUser_background_df">
+						<rect id="UIContainersUser_background_df" rx="0" ry="0" x="0" y="0" width="40" height="40">
+						</rect>
+					</svg>
+					<div id="Oval_dg">
+						<svg class="Oval_dh">
+							<ellipse id="Oval_dh" rx="20" ry="20" cx="20" cy="20">
+							</ellipse>
+						</svg>
+						<img id="Oval_di" src="assets/Oval_di.png" >
+							
+					</div>
+				</div>
+				<svg class="Ellipse_1">
+					<ellipse id="Ellipse_1" rx="5" ry="5" cx="5" cy="5">
+					</ellipse>
+				</svg>
+			</div>
+			<div id="User_8">
+				<div id="Name_dl">
+					<span>Nguyễn Thanh Vân</span>
+				</div>
+				<div id="UIContainersUser_dm">
+					<svg class="UIContainersUser_background_dn">
+						<rect id="UIContainersUser_background_dn" rx="0" ry="0" x="0" y="0" width="40" height="40">
+						</rect>
+					</svg>
+					<div id="Oval_do">
+						<svg class="Oval_dp">
+							<ellipse id="Oval_dp" rx="20" ry="20" cx="20" cy="20">
+							</ellipse>
+						</svg>
+						<img id="Oval_dq" src="assets/Oval_dq.png" >
+							
+					</div>
+				</div>
+				<svg class="Ellipse_1_dr">
+					<ellipse id="Ellipse_1_dr" rx="5" ry="5" cx="5" cy="5">
+					</ellipse>
+				</svg>
+			</div>
+			<div id="User_2">
+				<div id="Name_dt">
+					<span>Nguyễn Đức Minh</span>
+				</div>
+				<div id="UIContainersUser_du">
+					<svg class="UIContainersUser_background_dv">
+						<rect id="UIContainersUser_background_dv" rx="0" ry="0" x="0" y="0" width="40" height="40">
+						</rect>
+					</svg>
+					<div id="Oval_dw">
+						<svg class="Oval_dx">
+							<ellipse id="Oval_dx" rx="20" ry="20" cx="20" cy="20">
+							</ellipse>
+						</svg>
+						<img id="Oval_dy" src="assets/Oval_dy.png" >
+							
+					</div>
+				</div>
+			</div>
+			<div id="User_1">
+				<div id="Name_d">
+					<span>Nguyễn Mai Anh</span>
+				</div>
+				<div id="UIContainersUser_d">
+					<svg class="UIContainersUser_background_d">
+						<rect id="UIContainersUser_background_d" rx="0" ry="0" x="0" y="0" width="40" height="40">
+						</rect>
+					</svg>
+					<div id="Oval_d">
+						<svg class="Oval_ea">
+							<ellipse id="Oval_ea" rx="20" ry="20" cx="20" cy="20">
+							</ellipse>
+						</svg>
+						<img id="Oval_eb" src="assets/Oval_eb.png" >
+							
+					</div>
+				</div>
+			</div>
+			<div id="ID45k">
+				<span>55 lượt</span>
+			</div>
+			<div id="ID45k_d">
+				<span>42 lượt</span>
+			</div>
+			<div id="ID118k">
+				<span> </span>
+			</div>
+			<div id="ID118k_d">
+				<span> </span>
+			</div>
+			<div id="ID124k">
+				<span>58 lượt</span>
+			</div>
+			<div id="ID124k_eb">
+				<span>43 lượt</span>
+			</div>
+			<div id="ID145k">
+				<span>64 lượt</span>
+			</div>
+			<div id="ID145k_ed">
+				<span>46 lượt</span>
+			</div>
+			<div id="ID176k">
+				<span>70 lượt</span>
+			</div>
+			<div id="ID176k_ef">
+				<span>47 lượt</span>
+			</div>
+			<div id="ID211k">
+				<span>73 lượt</span>
+			</div>
+			<div id="ID211k_eh">
+				<span>51 lượt</span>
+			</div>
+		</div>
+	</div>
+	<div id="sidebar">
+		<svg class="bg_ej">
+			<rect id="bg_ej" rx="20" ry="20" x="0" y="0" width="390" height="803">
+			</rect>
+		</svg>
+		<svg class="Bg_ek" viewBox="0 0 330 44">
+			<path id="Bg_ek" d="M 20 0 L 310 0 C 321.0456848144531 0 330 9.849736213684082 330 22 C 330 34.15026473999023 321.0456848144531 44 310 44 L 20 44 C 8.954303741455078 44 0 34.15026473999023 0 22 C 0 9.849736213684082 8.954303741455078 0 20 0 Z">
+			</path>
+		</svg>
+		<svg class="Line_el">
+			<rect id="Line_el" rx="0" ry="0" x="0" y="0" width="330" height="2">
+			</rect>
+		</svg>
+		<svg class="Line_em">
+			<rect id="Line_em" rx="0" ry="0" x="0" y="0" width="330" height="2">
+			</rect>
+		</svg>
+		<div id="Menu">
+			<span>Thanh toán</span>
+		</div>
+		<div id="Menu_eo">
+			<span>Tin nhắn</span>
+		</div>
+		<div id="Menu_ep">
+			<span>Quản lý User</span>
+		</div>
+		<div id="Menu_eq">
+			<span>Phân tích lượng truy cập</span>
+		</div>
+		<div id="Menu_er">
+			<span>Lưu trữ thông tin quán</span>
+		</div>
+		<div id="dashboard">
+			<svg class="Path_11" viewBox="1096.912 1509.306 14 10">
+				<path id="Path_11" d="M 1096.911987304688 1519.305908203125 L 1110.911987304688 1519.305908203125 L 1110.911987304688 1509.305908203125 L 1096.911987304688 1509.305908203125 L 1096.911987304688 1519.305908203125 Z M 1099.228271484375 1511.900634765625 L 1108.595581054688 1511.900634765625 L 1108.595581054688 1516.711181640625 L 1099.228271484375 1516.711181640625 L 1099.228271484375 1511.900634765625 Z">
+				</path>
+			</svg>
+			<svg class="Path_22" viewBox="1096.912 1509.306 14 10">
+				<path id="Path_22" d="M 1096.911987304688 1519.305908203125 L 1110.911987304688 1519.305908203125 L 1110.911987304688 1509.305908203125 L 1096.911987304688 1509.305908203125 L 1096.911987304688 1519.305908203125 Z M 1099.228271484375 1511.900634765625 L 1108.595581054688 1511.900634765625 L 1108.595581054688 1516.711181640625 L 1099.228271484375 1516.711181640625 L 1099.228271484375 1511.900634765625 Z">
+				</path>
+			</svg>
+			<svg class="Path_20" viewBox="1096.912 1509.306 14 10">
+				<path id="Path_20" d="M 1096.911987304688 1519.305908203125 L 1110.911987304688 1519.305908203125 L 1110.911987304688 1509.305908203125 L 1096.911987304688 1509.305908203125 L 1096.911987304688 1519.305908203125 Z M 1099.228271484375 1511.900634765625 L 1108.595581054688 1511.900634765625 L 1108.595581054688 1516.711181640625 L 1099.228271484375 1516.711181640625 L 1099.228271484375 1511.900634765625 Z">
+				</path>
+			</svg>
+			<svg class="Path_21" viewBox="1096.912 1509.306 14 10">
+				<path id="Path_21" d="M 1096.911987304688 1519.305908203125 L 1110.911987304688 1519.305908203125 L 1110.911987304688 1509.305908203125 L 1096.911987304688 1509.305908203125 L 1096.911987304688 1519.305908203125 Z M 1099.228271484375 1511.900634765625 L 1108.595581054688 1511.900634765625 L 1108.595581054688 1516.711181640625 L 1099.228271484375 1516.711181640625 L 1099.228271484375 1511.900634765625 Z">
+				</path>
+			</svg>
+		</div>
+		<div id="Menu_ex">
+			<span>Dashboard</span>
+		</div>
+		<div id="_messages">
+			<svg class="Bg_ez">
+				<rect id="Bg_ez" rx="15" ry="15" x="0" y="0" width="30" height="30">
+				</rect>
+			</svg>
+			<div id="ID0">
+				<span>8</span>
+			</div>
+		</div>
+		<div id="Name_e">
+			<span>Nguyễn Hiếu</span>
+		</div>
+		<img id="Profile_image" src="assets/Profile_image.png" >
+			
+		<div id="Menu_e">
+			<span>Đăng xuất</span>
+		</div>
+		<div id="Group_15">
+			<svg class="Path_18" viewBox="280.576 2236.292 22.487 14.499">
+				<path id="Path_18" d="M 297.2699890136719 2238.051025390625 C 295.9509887695312 2238.051025390625 294.7009887695312 2238.506103515625 293.6929931640625 2239.300048828125 C 292.3739929199219 2237.48095703125 290.239013671875 2236.2919921875 287.8259887695312 2236.2919921875 C 283.8280029296875 2236.2919921875 280.5759887695312 2239.5439453125 280.5759887695312 2243.5419921875 C 280.5759887695312 2247.5390625 283.8280029296875 2250.791015625 287.8259887695312 2250.791015625 C 290.0710144042969 2250.791015625 292.0799865722656 2249.764892578125 293.4110107421875 2248.157958984375 C 294.4580078125 2249.097900390625 295.8139953613281 2249.637939453125 297.2699890136719 2249.637939453125 C 300.4639892578125 2249.637939453125 303.06298828125 2247.0380859375 303.06298828125 2243.843994140625 C 303.06298828125 2240.64892578125 300.4639892578125 2238.051025390625 297.2699890136719 2238.051025390625 Z M 287.8259887695312 2248.291015625 C 285.2070007324219 2248.291015625 283.0759887695312 2246.159912109375 283.0759887695312 2243.5419921875 C 283.0759887695312 2240.923095703125 285.2070007324219 2238.7919921875 287.8259887695312 2238.7919921875 C 290.4450073242188 2238.7919921875 292.5759887695312 2240.923095703125 292.5759887695312 2243.5419921875 C 292.5759887695312 2246.159912109375 290.4450073242188 2248.291015625 287.8259887695312 2248.291015625 Z M 297.2699890136719 2247.137939453125 C 296.2420043945312 2247.137939453125 295.3139953613281 2246.65087890625 294.6919860839844 2245.85205078125 C 294.93701171875 2245.125 295.0759887695312 2244.35009765625 295.0759887695312 2243.5419921875 C 295.0759887695312 2242.89599609375 294.9830017089844 2242.27197265625 294.822998046875 2241.676025390625 C 295.4440002441406 2240.97607421875 296.3200073242188 2240.551025390625 297.2699890136719 2240.551025390625 C 299.0849914550781 2240.551025390625 300.56298828125 2242.028076171875 300.56298828125 2243.843994140625 C 300.56298828125 2245.659912109375 299.0849914550781 2247.137939453125 297.2699890136719 2247.137939453125 Z">
+				</path>
+			</svg>
+			<svg class="Path_19" viewBox="274.941 2249.869 32.436 12.647">
+				<path id="Path_19" d="M 297.2699890136719 2249.868896484375 C 294.6809997558594 2249.868896484375 292.2669982910156 2250.6708984375 290.4100036621094 2252.1201171875 C 289.572998046875 2251.97900390625 288.7099914550781 2251.89892578125 287.8259887695312 2251.89892578125 C 281.3460083007812 2251.89892578125 275.8940124511719 2255.85009765625 275.1449890136719 2261.089111328125 L 274.9410095214844 2262.51611328125 L 300.7109985351562 2262.51611328125 L 300.5069885253906 2261.089111328125 C 300.3779907226562 2260.18798828125 300.1010131835938 2259.327880859375 299.7120056152344 2258.51708984375 L 301.8619995117188 2258.51708984375 L 307.3770141601562 2258.51708984375 L 307.1730041503906 2257.090087890625 C 306.5840148925781 2252.97412109375 302.3269958496094 2249.868896484375 297.2699890136719 2249.868896484375 Z M 277.9970092773438 2260.01611328125 C 279.281005859375 2256.73095703125 283.2239990234375 2254.39892578125 287.8259887695312 2254.39892578125 C 292.427001953125 2254.39892578125 296.3699951171875 2256.73095703125 297.6549987792969 2260.01611328125 L 277.9970092773438 2260.01611328125 Z M 301.8619995117188 2256.01708984375 L 297.9939880371094 2256.01708984375 C 296.8510131835938 2254.791015625 295.385009765625 2253.783935546875 293.7030029296875 2253.072998046875 C 294.7900085449219 2252.6201171875 296.0130004882812 2252.368896484375 297.2699890136719 2252.368896484375 C 300.4309997558594 2252.368896484375 303.1629943847656 2253.862060546875 304.2470092773438 2256.01708984375 L 301.8619995117188 2256.01708984375 Z">
+				</path>
+			</svg>
+		</div>
+		<div id="messages">
+			<svg class="Rectangle_13">
+				<rect id="Rectangle_13" rx="0" ry="0" x="0" y="0" width="17.013" height="2.5">
+				</rect>
+			</svg>
+			<svg class="Rectangle_14">
+				<rect id="Rectangle_14" rx="0" ry="0" x="0" y="0" width="10.102" height="2.5">
+				</rect>
+			</svg>
+			<svg class="Rectangle_15">
+				<rect id="Rectangle_15" rx="0" ry="0" x="0" y="0" width="1.772" height="2.5">
+				</rect>
+			</svg>
+			<svg class="Path_23" viewBox="360.999 1327.882 38.438 28.007">
+				<path id="Path_23" d="M 388.9649963378906 1327.881958007812 C 384.6849975585938 1327.881958007812 380.9800109863281 1329.68798828125 379.3529968261719 1332.461059570312 C 378.3039855957031 1332.296020507812 377.2179870605469 1332.202026367188 376.1000061035156 1332.202026367188 C 367.7730102539062 1332.202026367188 360.9989929199219 1337.055053710938 360.9989929199219 1343.02099609375 C 360.9989929199219 1345.365966796875 362.0509948730469 1347.64599609375 363.9779968261719 1349.5009765625 C 363.85400390625 1351.1669921875 363.7160034179688 1353.409057617188 363.7160034179688 1353.409057617188 L 363.56201171875 1355.889038085938 L 365.6449890136719 1354.534057617188 C 366.5580139160156 1353.93994140625 368.0249938964844 1353.005981445312 368.8429870605469 1352.524047851562 C 371.0559997558594 1353.386962890625 373.5509948730469 1353.840942382812 376.1000061035156 1353.840942382812 C 384.4259948730469 1353.840942382812 391.2009887695312 1348.988037109375 391.2009887695312 1343.02099609375 C 391.2009887695312 1342.996948242188 391.1960144042969 1342.973022460938 391.1950073242188 1342.947998046875 C 392.0859985351562 1342.81005859375 392.9440002441406 1342.594970703125 393.7560119628906 1342.29296875 C 394.2909851074219 1342.615966796875 395.1170043945312 1343.140991210938 395.697998046875 1343.51904296875 L 397.781005859375 1344.8740234375 L 397.6270141601562 1342.39404296875 C 397.6270141601562 1342.39404296875 397.5440063476562 1341.06396484375 397.4660034179688 1339.97900390625 C 398.7420043945312 1338.691040039062 399.43701171875 1337.121948242188 399.43701171875 1335.503051757812 C 399.43701171875 1331.22900390625 394.8370056152344 1327.881958007812 388.9649963378906 1327.881958007812 Z M 376.1000061035156 1351.340942382812 C 373.6650085449219 1351.340942382812 371.2990112304688 1350.875 369.2579956054688 1349.991943359375 L 368.7279968261719 1349.762939453125 L 368.2090148925781 1350.01904296875 C 367.8469848632812 1350.197021484375 367.1109924316406 1350.642944335938 366.3710021972656 1351.10498046875 C 366.4179992675781 1350.402954101562 366.4700012207031 1349.670043945312 366.5159912109375 1349.087036132812 L 366.5660095214844 1348.45703125 L 366.0880126953125 1348.04296875 C 364.9070129394531 1347.02099609375 363.4989929199219 1345.319946289062 363.4989929199219 1343.02099609375 C 363.4989929199219 1338.433959960938 369.1510009765625 1334.702026367188 376.1000061035156 1334.702026367188 C 383.0480041503906 1334.702026367188 388.7009887695312 1338.433959960938 388.7009887695312 1343.02099609375 C 388.7009887695312 1347.609008789062 383.0480041503906 1351.340942382812 376.1000061035156 1351.340942382812 Z M 395.3569946289062 1338.531005859375 L 394.8800048828125 1338.943969726562 L 394.9289855957031 1339.573974609375 C 394.9419860839844 1339.737060546875 394.9559936523438 1339.9169921875 394.968994140625 1340.10595703125 C 394.7359924316406 1339.968017578125 394.5360107421875 1339.85400390625 394.4030151367188 1339.787963867188 L 393.885009765625 1339.532958984375 L 393.35400390625 1339.761962890625 C 392.56298828125 1340.10302734375 391.6820068359375 1340.348022460938 390.7659912109375 1340.488037109375 C 389.6390075683594 1337.142944335938 386.3519897460938 1334.39501953125 382.010986328125 1333.067016601562 C 383.4030151367188 1331.462036132812 386.0589904785156 1330.381958007812 388.9649963378906 1330.381958007812 C 393.2860107421875 1330.381958007812 396.93701171875 1332.72705078125 396.93701171875 1335.503051757812 C 396.93701171875 1336.8759765625 396.0780029296875 1337.907958984375 395.3569946289062 1338.531005859375 Z">
+				</path>
+			</svg>
+		</div>
+		<div id="analytics">
+			<svg class="Path_24" viewBox="719.415 1326.529 32.58 32.58">
+				<path id="Path_24" d="M 735.7050170898438 1359.109008789062 C 744.6874389648438 1359.109008789062 751.9949951171875 1351.80126953125 751.9949951171875 1342.818481445312 L 751.9949951171875 1341.604736328125 L 736.9187622070312 1341.604736328125 L 736.9187622070312 1326.529052734375 L 735.7050170898438 1326.529052734375 C 726.7225341796875 1326.529052734375 719.4149780273438 1333.836791992188 719.4149780273438 1342.818481445312 C 719.4149780273438 1351.80126953125 726.7225341796875 1359.109008789062 735.7050170898438 1359.109008789062 Z M 734.4913330078125 1329.008911132812 L 734.4913330078125 1344.032348632812 L 749.51416015625 1344.032348632812 C 748.8975830078125 1351.11083984375 742.940673828125 1356.681518554688 735.7050170898438 1356.681518554688 C 728.0615234375 1356.681518554688 721.8424072265625 1350.462158203125 721.8424072265625 1342.818481445312 C 721.8424072265625 1335.583618164062 727.4129028320312 1329.62548828125 734.4913330078125 1329.008911132812 Z">
+				</path>
+			</svg>
+			<svg class="Path_25" viewBox="738.361 1323.109 18.028 18.027">
+				<path id="Path_25" d="M 756.3889770507812 1339.885986328125 C 756.3889770507812 1330.635009765625 748.8619995117188 1323.109008789062 739.6110229492188 1323.109008789062 L 738.3610229492188 1323.109008789062 L 738.3610229492188 1341.135986328125 L 756.3889770507812 1341.135986328125 L 756.3889770507812 1339.885986328125 Z M 740.8610229492188 1338.635986328125 L 740.8610229492188 1325.662963867188 C 747.739013671875 1326.261962890625 753.2349853515625 1331.758056640625 753.833984375 1338.635986328125 L 740.8610229492188 1338.635986328125 Z">
+				</path>
+			</svg>
+		</div>
+		<div id="files">
+			<svg class="Path_26" viewBox="902.335 2328.523 28.962 19.154">
+				<path id="Path_26" d="M 905.3590087890625 2347.677001953125 L 928.27197265625 2347.677001953125 L 931.2969970703125 2328.52294921875 L 902.3350219726562 2328.52294921875 L 905.3590087890625 2347.677001953125 Z M 926.135986328125 2345.177001953125 L 907.4959716796875 2345.177001953125 L 905.260986328125 2331.02294921875 L 928.3709716796875 2331.02294921875 L 926.135986328125 2345.177001953125 Z">
+				</path>
+			</svg>
+			<svg class="Rectangle_17">
+				<rect id="Rectangle_17" rx="0" ry="0" x="0" y="0" width="10.086" height="2.5">
+				</rect>
+			</svg>
+			<svg class="Rectangle_18">
+				<rect id="Rectangle_18" rx="0" ry="0" x="0" y="0" width="23.925" height="2.5">
+				</rect>
+			</svg>
+			<svg class="Rectangle_19">
+				<rect id="Rectangle_19" rx="0" ry="0" x="0" y="0" width="18.452" height="2.5">
+				</rect>
+			</svg>
+		</div>
+		<div id="payments">
+			<svg class="Path_30" viewBox="452.345 2238.188 34.466 22.432">
+				<path id="Path_30" d="M 452.3450012207031 2260.6201171875 L 486.8110046386719 2260.6201171875 L 486.8110046386719 2238.18798828125 L 452.3450012207031 2238.18798828125 L 452.3450012207031 2260.6201171875 Z M 454.8450012207031 2258.1201171875 L 454.8450012207031 2247.87109375 L 484.3110046386719 2247.87109375 L 484.3110046386719 2258.1201171875 L 454.8450012207031 2258.1201171875 Z M 484.3110046386719 2240.68798828125 L 484.3110046386719 2244.422119140625 L 454.8450012207031 2244.422119140625 L 454.8450012207031 2240.68798828125 L 484.3110046386719 2240.68798828125 Z">
+				</path>
+			</svg>
+			<svg class="Rectangle_28">
+				<rect id="Rectangle_28" rx="0" ry="0" x="0" y="0" width="8.739" height="2.5">
+				</rect>
+			</svg>
+		</div>
+		<div id="loguot">
+			<svg class="Path_31" viewBox="0 0 18.775 12.46">
+				<path id="Path_31" d="M 0 7.4794921875 L 13.66546630859375 7.4794921875 L 10.20849609375 10.6064453125 L 11.88525390625 12.4599609375 L 18.77490234375 6.2294921875 L 11.88525390625 0 L 10.20849609375 1.853515625 L 13.6651611328125 4.9794921875 L 0 4.9794921875 L 0 7.4794921875 Z">
+				</path>
+			</svg>
+			<svg class="Path_32" viewBox="0 0 24.313 28.805">
+				<path id="Path_32" d="M 24.3134765625 0 L 0 0 L 0 6.09765625 L 2.5 6.09765625 L 2.5 2.5 L 21.8134765625 2.5 L 21.8134765625 26.3046875 L 2.5 26.3046875 L 2.5 22.64453125 L 0 22.64453125 L 0 28.8046875 L 24.3134765625 28.8046875 L 24.3134765625 0 Z">
+				</path>
+			</svg>
+		</div>
+	</div>
+	<div id="Header">
+		<div id="top_elements" class="top_elements">
+			<div id="search" class="search">
+				<svg class="Ellipse_7">
+					<ellipse id="Ellipse_7" rx="25" ry="25" cx="25" cy="25">
+					</ellipse>
+				</svg>
+				<svg class="search_fu" viewBox="458.31 1020.686 26 25.999">
+					<path id="search_fu" d="M 469.5546264648438 1036.806396484375 C 471.1106262207031 1038.062622070312 473.0877685546875 1038.818359375 475.2433471679688 1038.818359375 C 480.2506408691406 1038.818359375 484.3099670410156 1034.759033203125 484.3099670410156 1029.751708984375 C 484.3099670410156 1024.744384765625 480.2506408691406 1020.685974121094 475.2433471679688 1020.685974121094 C 470.23681640625 1020.685974121094 466.1775207519531 1024.744384765625 466.1775207519531 1029.751708984375 C 466.1775207519531 1031.907348632812 466.9331359863281 1033.88427734375 468.1893920898438 1035.440551757812 L 458.3099975585938 1045.319702148438 L 459.6759948730469 1046.68505859375 L 469.5546264648438 1036.806396484375 Z M 475.2433471679688 1022.617370605469 C 479.177490234375 1022.617370605469 482.37841796875 1025.817504882812 482.37841796875 1029.751708984375 C 482.37841796875 1033.685791015625 479.177490234375 1036.886840820312 475.2433471679688 1036.886840820312 C 471.3092346191406 1036.886840820312 468.1090087890625 1033.685791015625 468.1090087890625 1029.751708984375 C 468.1090087890625 1025.817504882812 471.3092346191406 1022.617370605469 475.2433471679688 1022.617370605469 Z">
+					</path>
+				</svg>
+			</div>
+			<div id="notifications" class="notifications">
+				<svg class="Ellipse_8_fz">
+					<ellipse id="Ellipse_8_fz" rx="25" ry="25" cx="25" cy="25">
+					</ellipse>
+				</svg>
+				<svg class="notifications_fx" viewBox="723.05 1825.204 24 26">
+					<path id="notifications_fx" d="M 734.0587158203125 1825.203857421875 L 734.0587158203125 1828.278930664062 C 730.40283203125 1828.822998046875 727.56982421875 1832.322509765625 727.56982421875 1836.555297851562 L 727.56982421875 1840.6923828125 C 727.56982421875 1842.877197265625 727.1671142578125 1844.39794921875 725.0419921875 1846.175903320312 L 723.0499877929688 1847.844116210938 L 731.3929443359375 1847.844116210938 C 731.6013793945312 1849.728637695312 733.15185546875 1851.203857421875 735.049560546875 1851.203857421875 C 736.947998046875 1851.203857421875 738.4984741210938 1849.728637695312 738.7069702148438 1847.844116210938 L 747.0499877929688 1847.844116210938 L 745.0570678710938 1846.175903320312 C 742.9327392578125 1844.39794921875 742.5300903320312 1842.877197265625 742.5300903320312 1840.6923828125 L 742.5300903320312 1836.555297851562 C 742.5300903320312 1832.322509765625 739.697021484375 1828.822998046875 736.0404052734375 1828.278930664062 L 736.0404052734375 1825.203857421875 L 734.0587158203125 1825.203857421875 Z M 735.049560546875 1849.301879882812 C 734.2362060546875 1849.301879882812 733.55615234375 1848.67724609375 733.3801879882812 1847.844116210938 L 736.7197265625 1847.844116210938 C 736.5437622070312 1848.67724609375 735.8636474609375 1849.301879882812 735.049560546875 1849.301879882812 Z M 740.5484008789062 1836.555297851562 L 740.5484008789062 1840.6923828125 C 740.5484008789062 1842.648315429688 740.8488159179688 1844.299072265625 742.11865234375 1845.9423828125 L 727.981201171875 1845.9423828125 C 729.2510986328125 1844.299072265625 729.5515747070312 1842.648315429688 729.5515747070312 1840.6923828125 L 729.5515747070312 1836.555297851562 C 729.5515747070312 1832.994873046875 732.0175170898438 1830.0986328125 735.049560546875 1830.0986328125 C 738.082275390625 1830.0986328125 740.5484008789062 1832.994873046875 740.5484008789062 1836.555297851562 Z">
+					</path>
+				</svg>
+			</div>
+			<div id="notifications_fy" class="notifications">
+				<svg class="Ellipse_8_fz">
+					<ellipse id="Ellipse_8_fz" rx="25" ry="25" cx="25" cy="25">
+					</ellipse>
+				</svg>
+				<svg class="notifications_f" viewBox="723.05 1825.204 24 26">
+					<path id="notifications_f" d="M 734.0587158203125 1825.203857421875 L 734.0587158203125 1828.278930664062 C 730.40283203125 1828.822998046875 727.56982421875 1832.322509765625 727.56982421875 1836.555297851562 L 727.56982421875 1840.6923828125 C 727.56982421875 1842.877197265625 727.1671142578125 1844.39794921875 725.0419921875 1846.175903320312 L 723.0499877929688 1847.844116210938 L 731.3929443359375 1847.844116210938 C 731.6013793945312 1849.728637695312 733.15185546875 1851.203857421875 735.049560546875 1851.203857421875 C 736.947998046875 1851.203857421875 738.4984741210938 1849.728637695312 738.7069702148438 1847.844116210938 L 747.0499877929688 1847.844116210938 L 745.0570678710938 1846.175903320312 C 742.9327392578125 1844.39794921875 742.5300903320312 1842.877197265625 742.5300903320312 1840.6923828125 L 742.5300903320312 1836.555297851562 C 742.5300903320312 1832.322509765625 739.697021484375 1828.822998046875 736.0404052734375 1828.278930664062 L 736.0404052734375 1825.203857421875 L 734.0587158203125 1825.203857421875 Z M 735.049560546875 1849.301879882812 C 734.2362060546875 1849.301879882812 733.55615234375 1848.67724609375 733.3801879882812 1847.844116210938 L 736.7197265625 1847.844116210938 C 736.5437622070312 1848.67724609375 735.8636474609375 1849.301879882812 735.049560546875 1849.301879882812 Z M 740.5484008789062 1836.555297851562 L 740.5484008789062 1840.6923828125 C 740.5484008789062 1842.648315429688 740.8488159179688 1844.299072265625 742.11865234375 1845.9423828125 L 727.981201171875 1845.9423828125 C 729.2510986328125 1844.299072265625 729.5515747070312 1842.648315429688 729.5515747070312 1840.6923828125 L 729.5515747070312 1836.555297851562 C 729.5515747070312 1832.994873046875 732.0175170898438 1830.0986328125 735.049560546875 1830.0986328125 C 738.082275390625 1830.0986328125 740.5484008789062 1832.994873046875 740.5484008789062 1836.555297851562 Z">
+					</path>
+				</svg>
+				<svg class="Ellipse_10">
+					<ellipse id="Ellipse_10" rx="5" ry="5" cx="5" cy="5">
+					</ellipse>
+				</svg>
+			</div>
+			<div id="profile" class="profile">
+				<svg class="Ellipse_9">
+					<ellipse id="Ellipse_9" rx="25" ry="25" cx="25" cy="25">
+					</ellipse>
+				</svg>
+				<svg class="profile_f" viewBox="0 0 22 22">
+					<path id="profile_f" d="M 0 22 L 0.1654350310564041 20.85020065307617 C 0.8054391741752625 16.42293739318848 5.46323299407959 13.08392524719238 10.99961853027344 13.08392524719238 C 16.53676605224609 13.08392524719238 21.19379806518555 16.42293739318848 21.83456420898438 20.85020065307617 L 22 22 L 0 22 Z M 2.477140188217163 19.98574256896973 L 19.52285957336426 19.98574256896973 C 18.44355964660645 17.13119316101074 15.01156139373779 15.09805583953857 10.99961853027344 15.09805583953857 C 6.988438606262207 15.09805583953857 3.557202816009521 17.13119316101074 2.477140188217163 19.98574256896973 Z M 4.829838752746582 6.108600616455078 C 4.829838752746582 2.739883422851562 7.597681999206543 0 10.99961853027344 0 C 14.40231800079346 0 17.16946220397949 2.739883422851562 17.16946220397949 6.108600616455078 C 17.16946220397949 9.478073120117188 14.40231800079346 12.21808242797852 10.99961853027344 12.21808242797852 C 7.597681999206543 12.21808242797852 4.829838752746582 9.478073120117188 4.829838752746582 6.108600616455078 Z M 6.863933086395264 6.108600616455078 C 6.863933086395264 8.367293357849121 8.718737602233887 10.20382499694824 10.99961853027344 10.20382499694824 C 13.27980041503906 10.20382499694824 15.13530349731445 8.367293357849121 15.13530349731445 6.108600616455078 C 15.13530349731445 3.851544857025146 13.27980041503906 2.01350212097168 10.99961853027344 2.01350212097168 C 8.718737602233887 2.01350212097168 6.863933086395264 3.851544857025146 6.863933086395264 6.108600616455078 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<img id="Logo-PNG" src="assets/Logo-PNG.png" >
+			
+	</div>
+</div>
+</body>
+</html>
