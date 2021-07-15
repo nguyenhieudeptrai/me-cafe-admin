@@ -3474,7 +3474,7 @@
 				<div id="ID01">
 					<span>01</span>
 				</div>
-				<a href="D:\MeCoffee Project\me-cafe-admin\dashboard3\Popup_MaiAnh.html" id="ViewBtn">
+				<button onclick="btnPopUpUser(1,'popup_bg_maianh')" id="ViewBtn">
 					<svg class="Rectangle_143_co">
 						<rect id="Rectangle_143_co" rx="4" ry="4" x="0" y="0" width="72" height="20">
 						</rect>
@@ -3482,7 +3482,7 @@
 					<div id="View">
 						<span>View</span>
 					</div>
-				</a>
+				</button>
 				<div id="StutusBtn">
 					<svg class="Rectangle_143_cr">
 						<rect id="Rectangle_143_cr" rx="4" ry="4" x="0" y="0" width="72" height="20">
@@ -3979,6 +3979,716 @@
 			</svg>
 		</div>
 	</div>
+
+
+	<!-- Cho con mai anh -->
+	<div id="popup_bg_maianh">
+		<div id="popup_theMaiAnh">
+			<svg class="popup_bg_bg">
+				<rect id="popup_bg_bg" rx="20" ry="20" x="0" y="0" width="548" height="527">
+				</rect>
+			</svg>
+			<svg class="popup_BgTable">
+				<rect id="popup_BgTable" rx="10" ry="10" x="0" y="0" width="493" height="226">
+				</rect>
+			</svg>
+			<div id="popup_Header">
+				<svg class="popup_Line">
+					<rect id="popup_Line" rx="0" ry="0" x="0" y="0" width="444.994" height="3">
+					</rect>
+				</svg>
+				<div id="popup_THNG_TIN_USER">
+					<span>THÔNG TIN USER</span>
+				</div>
+			</div>
+			<div id="popup_Status">
+				<div id="popup_Trng_thi">
+					<span>Trạng thái:</span>
+				</div>
+				<div id="popup_Blockbtn">
+					<svg class="popup_Rectangle_143">
+						<rect id="popup_Rectangle_143" rx="4" ry="4" x="0" y="0" width="102" height="15">
+						</rect>
+					</svg>
+					<div id="popup_M_Kha_ti_khon">
+						<span>Mở/ Khóa tài khoản</span>
+					</div>
+				</div>
+				<div id="popup_Hot_ng">
+					<span>Hoạt động</span>
+				</div>
+			</div>
+			<div id="popup_UserInfo">
+				<div id="popup_Qun">
+					<span>(Quán)</span>
+				</div>
+				<div id="popup_S_in_thoi">
+					<span>Số điện thoại:</span>
+				</div>
+				<div id="popup_Lt_booking">
+					<span>Lượt booking:</span>
+				</div>
+				<div id="popup_ID">
+					<span>ID:</span>
+				</div>
+				<div id="popup_Name">
+					<span>Nguyễn Phương Tố Như</span>
+				</div>
+				<div id="popup_ID0978821134">
+					<span>0978821134</span>
+				</div>
+				<div id="popup_ID40_Lt">
+					<span>40 Lượt</span>
+				</div>
+				<div id="popup_ID03">
+					<span>03</span>
+				</div>
+				<div id="popup_UIContainersUser">
+					<svg class="popup_UIContainersUser_background">
+						<rect id="popup_UIContainersUser_background" rx="0" ry="0" x="0" y="0" width="59" height="59">
+						</rect>
+					</svg>
+					<div id="popup_Oval">
+						<svg class="popup_Oval_">
+							<ellipse id="popup_Oval_" rx="29.5" ry="29.5" cx="29.5" cy="29.5">
+							</ellipse>
+						</svg>
+						<img id="popup_Oval_ba" src="assets/Oval_ba.png">
+
+					</div>
+				</div>
+			</div>
+			<div id="popup_History2">
+				<svg class="popup_Rectangle_144">
+					<rect id="popup_Rectangle_144" rx="9" ry="9" x="0" y="0" width="457" height="72">
+					</rect>
+				</svg>
+				<img id="popup_cafe8" src="assets/cafe8.png">
+
+				<div id="popup_Silvios_Kaffe">
+					<span>Silvios Kaffe</span>
+				</div>
+				<div id="popup_ID134_Hai_B_Trng_Qun_1_TPHCM">
+					<span>134 Hai Bà Trưng, Quận 1, TP.HCM</span>
+				</div>
+				<div id="popup_ID0730_-_1000">
+					<span>07:30 - 10:00</span>
+				</div>
+				<div id="popup_Th_7_1052021">
+					<span>Thứ 7 (10/5/2021)</span>
+				</div>
+				<div id="popup_Bn_2_Ch">
+					<span>Bàn 2 Chỗ</span>
+				</div>
+			</div>
+			<div id="popup_History1">
+				<svg class="popup_Rectangle_145">
+					<rect id="popup_Rectangle_145" rx="9" ry="9" x="0" y="0" width="457" height="72">
+					</rect>
+				</svg>
+				<img id="popup_cafe4" src="assets/cafe4.png">
+
+				<div id="popup_Nh_ca_Nng_Coffee">
+					<span>Nhà của Nắng Coffee</span>
+				</div>
+				<div id="popup_ID210_Trn_Hng_o_Qun_5_TPHCM">
+					<span>210 Trần Hưng Đạo, Quận 5,, TP.HCM</span>
+				</div>
+				<div id="popup_ID1300_-_1600">
+					<span>13:00 - 16:00</span>
+				</div>
+				<div id="popup_Phng_hp_10_Ch">
+					<span>Phòng họp 10 Chỗ</span>
+				</div>
+				<div id="popup_Ch_nht_2162021">
+					<span>Chủ nhật (21/6/2021)</span>
+				</div>
+			</div>
+			<button onclick="btnPopUpUser(0,'popup_bg_maianh')"><img id="popup_Exitbtn1" src="assets/Exitbtn1.png"></button>
+
+		</div>
+	</div>
+
+	<style type="text/css">
+		#popup_bg_maianh {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 30;
+			justify-content: center;
+			align-items: center;
+			background-color: rgba(0,0,0, 0.3);
+			display: none;
+		}
+
+		#popup_theMaiAnh {
+			position: absolute;
+			width: 548px;
+			height: 527px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		#popup_bg_bg {
+			fill: rgba(255, 255, 255, 1);
+		}
+
+		.popup_bg_bg {
+			filter: drop-shadow(0px 5px 25px rgba(82, 87, 93, 0.102));
+			position: absolute;
+			overflow: visible;
+			width: 623px;
+			height: 602px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#popup_BgTable {
+			opacity: 0.5;
+			fill: rgba(227, 233, 239, 1);
+		}
+
+		.popup_BgTable {
+			position: absolute;
+			overflow: visible;
+			width: 493px;
+			height: 226px;
+			left: 28px;
+			top: 269px;
+		}
+
+		#popup_Header {
+			position: absolute;
+			width: 444.994px;
+			height: 39px;
+			left: 19.006px;
+			top: 25.5px;
+			overflow: visible;
+		}
+
+		#popup_Line {
+			fill: rgba(235, 242, 247, 1);
+		}
+
+		.popup_Line {
+			position: absolute;
+			overflow: visible;
+			width: 444.994px;
+			height: 3px;
+			left: 0px;
+			top: 36px;
+		}
+
+		#popup_THNG_TIN_USER {
+			left: 16.994px;
+			top: 0px;
+			position: absolute;
+			overflow: visible;
+			width: 202px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 24px;
+			color: rgba(51, 51, 51, 1);
+			letter-spacing: 0.3125px;
+		}
+
+		#popup_Status {
+			position: absolute;
+			width: 131px;
+			height: 39px;
+			left: 380px;
+			top: 176px;
+			overflow: visible;
+		}
+
+		#popup_Trng_thi {
+			left: 0px;
+			top: 0px;
+			position: absolute;
+			overflow: visible;
+			width: 71px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			color: rgba(5, 71, 136, 1);
+		}
+
+		#popup_Blockbtn {
+			position: absolute;
+			width: 102px;
+			height: 15px;
+			left: 0px;
+			top: 24px;
+			overflow: visible;
+		}
+
+		#popup_Rectangle_143 {
+			fill: rgba(223, 123, 9, 1);
+		}
+
+		.popup_Rectangle_143 {
+			position: absolute;
+			overflow: visible;
+			width: 102px;
+			height: 15px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#popup_M_Kha_ti_khon {
+			left: 8px;
+			top: 1px;
+			position: absolute;
+			overflow: visible;
+			width: 88px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 10px;
+			color: rgba(255, 255, 255, 1);
+		}
+
+		#popup_Hot_ng {
+			left: 75px;
+			top: 2px;
+			position: absolute;
+			overflow: visible;
+			width: 57px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			color: rgba(36, 159, 0, 1);
+		}
+
+		#popup_UserInfo {
+			position: absolute;
+			width: 250px;
+			height: 150px;
+			left: 32px;
+			top: 109px;
+			overflow: visible;
+		}
+
+		#popup_Qun {
+			left: 69px;
+			top: 28px;
+			position: absolute;
+			overflow: visible;
+			width: 45px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: italic;
+			font-weight: normal;
+			font-size: 15px;
+			color: rgba(5, 71, 136, 1);
+		}
+
+		#popup_S_in_thoi {
+			left: 69px;
+			top: 99px;
+			position: absolute;
+			overflow: visible;
+			width: 93px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			color: rgba(5, 71, 136, 1);
+		}
+
+		#popup_Lt_booking {
+			left: 69px;
+			top: 132px;
+			position: absolute;
+			overflow: visible;
+			width: 94px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			color: rgba(5, 71, 136, 1);
+		}
+
+		#popup_ID {
+			left: 70px;
+			top: 66px;
+			position: absolute;
+			overflow: visible;
+			width: 19px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			color: rgba(5, 71, 136, 1);
+		}
+
+		#popup_Name {
+			left: 71px;
+			top: 2px;
+			position: absolute;
+			overflow: visible;
+			width: 180px;
+			white-space: nowrap;
+			line-height: 22px;
+			margin-top: -3px;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			color: rgba(82, 87, 93, 1);
+			letter-spacing: 0.3125px;
+		}
+
+		#popup_ID0978821134 {
+			left: 171px;
+			top: 99px;
+			position: absolute;
+			overflow: visible;
+			width: 69px;
+			white-space: nowrap;
+			line-height: 61px;
+			margin-top: -24.5px;
+			text-align: center;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_ID40_Lt {
+			left: 171px;
+			top: 133px;
+			position: absolute;
+			overflow: visible;
+			width: 41px;
+			white-space: nowrap;
+			line-height: 61px;
+			margin-top: -24.5px;
+			text-align: center;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_ID03 {
+			left: 171px;
+			top: 68px;
+			position: absolute;
+			overflow: visible;
+			width: 15px;
+			white-space: nowrap;
+			line-height: 61px;
+			margin-top: -24.5px;
+			text-align: center;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_UIContainersUser {
+			position: absolute;
+			width: 59px;
+			height: 59px;
+			left: 0px;
+			top: 0px;
+			overflow: visible;
+		}
+
+		#popup_UIContainersUser_background {
+			fill: rgba(0, 0, 0, 0);
+		}
+
+		.popup_UIContainersUser_background {
+			position: absolute;
+			overflow: visible;
+			width: 59px;
+			height: 59px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#popup_Oval {
+			position: absolute;
+			width: 59px;
+			height: 59px;
+			left: 0px;
+			top: 0px;
+			overflow: visible;
+		}
+
+		#popup_Oval_ {
+			fill: rgba(204, 204, 204, 1);
+		}
+
+		.popup_Oval_ {
+			position: absolute;
+			overflow: visible;
+			width: 59px;
+			height: 59px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#popup_Oval_ba {
+			position: absolute;
+			width: 59px;
+			height: 59px;
+			left: 0px;
+			top: 0px;
+			overflow: visible;
+		}
+
+		#popup_History2 {
+			position: absolute;
+			width: 457px;
+			height: 72px;
+			left: 46px;
+			top: 291px;
+			overflow: visible;
+		}
+
+		#popup_Rectangle_144 {
+			fill: rgba(255, 255, 255, 1);
+		}
+
+		.popup_Rectangle_144 {
+			filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+			position: absolute;
+			overflow: visible;
+			width: 475px;
+			height: 90px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#popup_cafe8 {
+			position: absolute;
+			width: 80px;
+			height: 51px;
+			left: 13px;
+			top: 12px;
+			overflow: visible;
+		}
+
+		#popup_Silvios_Kaffe {
+			left: 111px;
+			top: 17px;
+			position: absolute;
+			overflow: visible;
+			width: 85px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			color: rgba(223, 123, 9, 1);
+		}
+
+		#popup_ID134_Hai_B_Trng_Qun_1_TPHCM {
+			left: 111px;
+			top: 39px;
+			position: absolute;
+			overflow: visible;
+			width: 151px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: italic;
+			font-weight: normal;
+			font-size: 10px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_ID0730_-_1000 {
+			left: 386px;
+			top: 13px;
+			position: absolute;
+			overflow: visible;
+			width: 57px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: italic;
+			font-weight: normal;
+			font-size: 10px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_Th_7_1052021 {
+			left: 361px;
+			top: 29px;
+			position: absolute;
+			overflow: visible;
+			width: 82px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: italic;
+			font-weight: normal;
+			font-size: 10px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_Bn_2_Ch {
+			left: 397px;
+			top: 45px;
+			position: absolute;
+			overflow: visible;
+			width: 46px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: italic;
+			font-weight: normal;
+			font-size: 10px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_History1 {
+			position: absolute;
+			width: 457px;
+			height: 72px;
+			left: 46px;
+			top: 380px;
+			overflow: visible;
+		}
+
+		#popup_Rectangle_145 {
+			fill: rgba(255, 255, 255, 1);
+		}
+
+		.popup_Rectangle_145 {
+			filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+			position: absolute;
+			overflow: visible;
+			width: 475px;
+			height: 90px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#popup_cafe4 {
+			position: absolute;
+			width: 80px;
+			height: 51px;
+			left: 13px;
+			top: 11px;
+			overflow: visible;
+		}
+
+		#popup_Nh_ca_Nng_Coffee {
+			left: 111px;
+			top: 19px;
+			position: absolute;
+			overflow: visible;
+			width: 144px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			color: rgba(223, 123, 9, 1);
+		}
+
+		#popup_ID210_Trn_Hng_o_Qun_5_TPHCM {
+			left: 111px;
+			top: 41px;
+			position: absolute;
+			overflow: visible;
+			width: 162px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: italic;
+			font-weight: normal;
+			font-size: 10px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_ID1300_-_1600 {
+			left: 386px;
+			top: 15px;
+			position: absolute;
+			overflow: visible;
+			width: 57px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: italic;
+			font-weight: normal;
+			font-size: 10px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_Phng_hp_10_Ch {
+			left: 361px;
+			top: 47px;
+			position: absolute;
+			overflow: visible;
+			width: 81px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: italic;
+			font-weight: normal;
+			font-size: 10px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_Ch_nht_2162021 {
+			left: 350px;
+			top: 31px;
+			position: absolute;
+			overflow: visible;
+			width: 96px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: italic;
+			font-weight: normal;
+			font-size: 10px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_Exitbtn1 {
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			left: 497px;
+			top: 15px;
+			overflow: visible;
+		}
+	</style>
+	<!-- Het 'Mai anh' -->
+
+
 </body>
 
 </html>

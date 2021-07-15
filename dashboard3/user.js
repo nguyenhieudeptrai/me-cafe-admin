@@ -29,3 +29,15 @@ function btnSelectType(myTag, type) {
             break;
     }
 }
+
+function btnPopUpUser(type,name) {
+    let tag = $("#"+(name));
+    switch (type) {
+        case 1:
+            tag.css("display", "block");
+            break;
+        case 0:
+            tag.css("display", "none");
+            break;
+    }
+}
