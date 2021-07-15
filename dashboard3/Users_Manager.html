@@ -6,9 +6,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Users Manager</title>
-	
-<script src="jquery.js"></script>
-<script src="user.js"></script>
+
+	<script src="jquery.js"></script>
+	<script src="user.js"></script>
 	<style id="applicationStylesheet" type="text/css">
 		.mediaViewInfo {
 			--web-view-name: Users Manager;
@@ -51,6 +51,15 @@
 			height: 1080px;
 			left: 0px;
 			top: 0px;
+		}
+
+		#info {
+			position: absolute;
+			width: 392px;
+			height: 392.977px;
+			left: 975px;
+			top: 582px;
+			overflow: visible;
 		}
 
 		#bg {
@@ -319,7 +328,7 @@
 		}
 
 		#STT {
-			left: 17px;
+			left: 25px;
 			top: 11px;
 			position: absolute;
 			overflow: visible;
@@ -357,7 +366,7 @@
 		}
 
 		#Bg_ {
-			fill: rgba(248, 246, 207, 1);
+			fill: #F8F6CF
 		}
 
 		.Bg_ {
@@ -366,9 +375,10 @@
 			width: 330px;
 			height: 44px;
 			left: 30.5px;
-			top: 152.5px;
+			top: 155px;
 			transform: matrix(1, 0, 0, 1, 0, 0);
 		}
+
 
 		#Line_ {
 			fill: rgba(235, 242, 247, 1);
@@ -398,8 +408,8 @@
 
 		#Group_188 {
 			position: absolute;
-			width: 120.823px;
-			height: 22.377px;
+			width: 30px;
+			height: 22px;
 			left: 46.177px;
 			top: 109.256px;
 			overflow: visible;
@@ -830,23 +840,24 @@
 			background-color: rgba(241, 244, 247, 1);
 			color: rgba(223, 123, 9, 1);
 			border: 1px solid rgba(223, 123, 9, 1);
-			border-radius: 5;
+			border-radius: 9;
 			padding: 5 10 5 10;
 			width: 120px;
-			height: 20px;
+			height: 25px;
 		}
 
 		.btn_type_selected {
 			background-color: rgba(223, 123, 9, 1);
 			color: #FFF;
-			border-radius: 5;
+			border-radius: 9;
 			padding: 5 10 5 10;
 			width: 120px;
-			height: 20px;
+			height: 25px;
 		}
 
 		.btn_type_select:hover {
-			background-color: #FFF98D;
+			background-color: rgba(223, 123, 9, 1);
+			color: #FFF;
 		}
 
 		#button_row:hover {
@@ -3181,6 +3192,38 @@
 			height: 19px;
 			align-items: center;
 		}
+
+		.popup {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+		}
+
+		.popup .show {
+			visibility: visible;
+			-webkit-animation: fadeIn 1s;
+			animation: fadeIn 1s
+		}
+
+		@-webkit-keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
 	</style>
 </head>
 
@@ -3239,10 +3282,10 @@
 			</div>
 		</div>
 		<div id="HeaderTable">
-			<svg class="Rectangle_112">
+			<!-- <svg class="Rectangle_112">
 				<rect id="Rectangle_112" rx="10" ry="10" x="0" y="0" width="1183" height="41">
 				</rect>
-			</svg>
+			</svg> -->
 			<div id="H_v_tn">
 				<span>Họ và tên</span>
 			</div>
@@ -3278,7 +3321,7 @@
 				</rect>
 			</svg>
 			<div id="Group_188">
-				<div id="dashboard">
+				<a href="D:\MeCoffee Project\me-cafe-admin\dashboard3\Dashboard.html" id="dashboard">
 					<svg class="Path_11" viewBox="1096.912 1509.306 14 10">
 						<path id="Path_11"
 							d="M 1096.911987304688 1519.305908203125 L 1110.911987304688 1519.305908203125 L 1110.911987304688 1509.305908203125 L 1096.911987304688 1509.305908203125 L 1096.911987304688 1519.305908203125 Z M 1099.228271484375 1511.900634765625 L 1108.595581054688 1511.900634765625 L 1108.595581054688 1516.711181640625 L 1099.228271484375 1516.711181640625 L 1099.228271484375 1511.900634765625 Z">
@@ -3299,10 +3342,11 @@
 							d="M 1096.911987304688 1519.305908203125 L 1110.911987304688 1519.305908203125 L 1110.911987304688 1509.305908203125 L 1096.911987304688 1509.305908203125 L 1096.911987304688 1519.305908203125 Z M 1099.228271484375 1511.900634765625 L 1108.595581054688 1511.900634765625 L 1108.595581054688 1516.711181640625 L 1099.228271484375 1516.711181640625 L 1099.228271484375 1511.900634765625 Z">
 						</path>
 					</svg>
-				</div>
-				<div id="Menu">
-					<span>Dashboard</span>
-				</div>
+					<div id="Menu">
+						<span>Dashboard</span>
+					</div>
+				</a>
+
 			</div>
 			<div id="Name">
 				<span>Nguyễn Hiếu</span>
@@ -3379,19 +3423,18 @@
 				</div>
 			</div>
 			<img id="Logo-PNG" src="assets/Logo-PNG.png">
-
 		</div>
 		<div id="Header1">
 			<div id="Title">
 				<span>QUẢN LÝ USER</span>
 			</div>
 			<div id="Tatcabtn">
-				<button class="btn_type_select" onclick="btnSelectType(this, 1)">
+				<button class="btn_type_select btn_type_selected" onclick="btnSelectType(this, 1)">
 					Tất cả
 				</button>
 			</div>
 			<div id="Quanbtn">
-				<button class="btn_type_select btn_type_selected" onclick="btnSelectType(this, 2)">
+				<button class="btn_type_select " onclick="btnSelectType(this, 2)">
 					Quán
 				</button>
 			</div>
@@ -3431,7 +3474,7 @@
 				<div id="ID01">
 					<span>01</span>
 				</div>
-				<div id="ViewBtn">
+				<a href="D:\MeCoffee Project\me-cafe-admin\dashboard3\Popup_MaiAnh.html" id="ViewBtn">
 					<svg class="Rectangle_143_co">
 						<rect id="Rectangle_143_co" rx="4" ry="4" x="0" y="0" width="72" height="20">
 						</rect>
@@ -3439,7 +3482,7 @@
 					<div id="View">
 						<span>View</span>
 					</div>
-				</div>
+				</a>
 				<div id="StutusBtn">
 					<svg class="Rectangle_143_cr">
 						<rect id="Rectangle_143_cr" rx="4" ry="4" x="0" y="0" width="72" height="20">
@@ -3478,7 +3521,7 @@
 				<div id="ID0978821134_c">
 					<span>0978821134</span>
 				</div>
-				<div id="ViewBtn_c">
+				<a href="D:\MeCoffee Project\me-cafe-admin\dashboard3\Popup.html" id="ViewBtn_c">
 					<svg class="Rectangle_143_c">
 						<rect id="Rectangle_143_c" rx="4" ry="4" x="0" y="0" width="72" height="20">
 						</rect>
@@ -3486,7 +3529,7 @@
 					<div id="View_c">
 						<span>View</span>
 					</div>
-				</div>
+				</a>
 				<div id="StutusBtn_c">
 					<svg class="Rectangle_143_da">
 						<rect id="Rectangle_143_da" rx="4" ry="4" x="0" y="0" width="72" height="20">
@@ -3538,7 +3581,7 @@
 						<span>Hoạt động</span>
 					</div>
 				</div>
-				<div id="ViewBtn_dn">
+				<a href="D:\MeCoffee Project\me-cafe-admin\dashboard3\Popup_ToNhu.html" id="ViewBtn_dn">
 					<svg class="Rectangle_143_do">
 						<rect id="Rectangle_143_do" rx="4" ry="4" x="0" y="0" width="72" height="20">
 						</rect>
@@ -3546,7 +3589,7 @@
 					<div id="View_dp">
 						<span>View</span>
 					</div>
-				</div>
+				</a>
 				<div id="ID0978821134_dq">
 					<span>0978821134</span>
 				</div>
