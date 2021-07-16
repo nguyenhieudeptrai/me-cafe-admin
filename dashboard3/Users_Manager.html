@@ -3444,7 +3444,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="userRecord" id="User1" >
+		<div class="userRecord" id="User1">
 			<button id="button_row">
 				<div id="ID0978821134">
 					<span>0978821134</span>
@@ -3519,7 +3519,7 @@
 					<span>Người dùng</span>
 				</div>
 				<div id="ID0978821134_c">
-					<span>0978743453	</span>
+					<span>0978743453 </span>
 				</div>
 				<a href="Popup.html" id="ViewBtn_c">
 					<svg class="Rectangle_143_c">
@@ -3592,7 +3592,7 @@
 						<span>Hoạt động</span>
 					</div>
 				</div>
-				<a href="Popup_ToNhu.html" id="ViewBtn_dn">
+				<button  id="ViewBtn_dn" onclick="btnPopUpUser(1,'popup_bg_store')">
 					<svg class="Rectangle_143_do">
 						<rect id="Rectangle_143_do" rx="4" ry="4" x="0" y="0" width="72" height="20">
 						</rect>
@@ -3600,7 +3600,7 @@
 					<div id="View_dp">
 						<span>View</span>
 					</div>
-				</a>
+				</button>
 				<div id="ID0978821134_dq">
 					<span>0903821145</span>
 				</div>
@@ -4126,7 +4126,8 @@
 					<span>Chủ nhật (21/6/2021)</span>
 				</div>
 			</div>
-			<button onclick="btnPopUpUser(0,'popup_bg_maianh')"><img id="popup_Exitbtn1" src="assets/Exitbtn1.png"></button>
+			<button onclick="btnPopUpUser(0,'popup_bg_maianh')"><img id="popup_Exitbtn1"
+					src="assets/Exitbtn1.png"></button>
 
 		</div>
 	</div>
@@ -4253,7 +4254,8 @@
 					<span>Chủ nhật (21/6/2021)</span>
 				</div>
 			</div>
-			<button onclick="btnPopUpUser(0,'popup_bg_ducminh')"><img id="popup_Exitbtn1" src="assets/Exitbtn1.png"></button>
+			<button onclick="btnPopUpUser(0,'popup_bg_ducminh')"><img id="popup_Exitbtn1"
+					src="assets/Exitbtn1.png"></button>
 
 		</div>
 	</div>
@@ -4380,28 +4382,26 @@
 					<span>Chủ nhật (21/6/2021)</span>
 				</div>
 			</div>
-			<button onclick="btnPopUpUser(0,'popup_bg_nhatminh')"><img id="popup_Exitbtn1" src="assets/Exitbtn1.png"></button>
+			<button onclick="btnPopUpUser(0,'popup_bg_nhatminh')"><img id="popup_Exitbtn1"
+					src="assets/Exitbtn1.png"></button>
 
 		</div>
 	</div>
 
 
 	<style type="text/css">
-
-
-
-#popup_bg_ducminh {
+		#popup_bg_ducminh {
 			position: absolute;
 			width: 100%;
 			height: 100%;
 			z-index: 30;
 			justify-content: center;
 			align-items: center;
-			background-color: rgba(0,0,0, 0.3);
+			background-color: rgba(0, 0, 0, 0.3);
 			display: none;
 		}
 
-		#popup_theDucMinh{
+		#popup_theDucMinh {
 			position: absolute;
 			width: 548px;
 			height: 527px;
@@ -4418,7 +4418,7 @@
 			z-index: 30;
 			justify-content: center;
 			align-items: center;
-			background-color: rgba(0,0,0, 0.3);
+			background-color: rgba(0, 0, 0, 0.3);
 			display: none;
 		}
 
@@ -4438,7 +4438,7 @@
 			z-index: 30;
 			justify-content: center;
 			align-items: center;
-			background-color: rgba(0,0,0, 0.3);
+			background-color: rgba(0, 0, 0, 0.3);
 			display: none;
 		}
 
@@ -5008,8 +5008,923 @@
 		}
 	</style>
 	<!-- Het 'Mai anh' -->
+	<!-- store -->
 
+	<div id="popup_bg_store">
+		<div id="popup_store_Popup_shop">
+			<svg class="popup_store_popup_store_bg">
+				<rect id="popup_store_bg" rx="20" ry="20" x="0" y="0" width="548" height="527">
+				</rect>
+			</svg>
+			<svg class="popup_store_BgTable">
+				<rect id="popup_store_BgTable" rx="10" ry="10" x="0" y="0" width="493" height="226">
+				</rect>
+			</svg>
+			<div id="popup_store_Title_Shop">
+				<svg class="popup_store_Line">
+					<rect id="popup_store_Line" rx="0" ry="0" x="0" y="0" width="444.994" height="3">
+					</rect>
+				</svg>
+				<div id="popup_store_THNG_TIN_USER">
+					<span>THÔNG TIN CHỦ QUÁN</span>
+				</div>
+			</div>
+			<div id="popup_store_Status">
+				<div id="popup_store_Trng_thi">
+					<span>Trạng thái:</span>
+				</div>
+				<div id="popup_store_Blockbtn">
+					<svg class="popup_store_Rectangle_143">
+						<rect id="popup_store_Rectangle_143" rx="4" ry="4" x="0" y="0" width="102" height="15">
+						</rect>
+					</svg>
+					<div id="popup_store_Kha_ti_khon">
+						<span>Khóa tài khoản</span>
+					</div>
+				</div>
+				<div id="popup_store_Hot_ng">
+					<span>Hoạt động</span>
+				</div>
+			</div>
+			<div id="popup_store_History2">
+				<svg class="popup_store_Rectangle_144">
+					<rect id="popup_store_Rectangle_144" rx="9" ry="9" x="0" y="0" width="447" height="72">
+					</rect>
+				</svg>
+				<img id="popup_store_cafe8" src="assets/cafe8.png">
 
+				<div id="popup_store_start">
+					<svg class="popup_store_Icon_material-star" viewBox="3 3 7.197 6.837">
+						<path id="popup_store_Icon_material-star"
+							d="M 6.5986328125 8.495112419128418 L 8.822587966918945 9.83740234375 L 8.232412338256836 7.307563781738281 L 10.197265625 5.605410575866699 L 7.609848976135254 5.385893821716309 L 6.5986328125 3 L 5.587417125701904 5.385893821716309 L 3 5.605410575866699 L 4.964853286743164 7.307563781738281 L 4.374677658081055 9.83740234375 L 6.5986328125 8.495112419128418 Z">
+						</path>
+					</svg>
+					<svg class="popup_store_Icon_material-star_" viewBox="3 3 7.197 6.837">
+						<path id="popup_store_Icon_material-star_"
+							d="M 6.5986328125 8.495112419128418 L 8.822587966918945 9.83740234375 L 8.232412338256836 7.307563781738281 L 10.197265625 5.605410575866699 L 7.609848976135254 5.385893821716309 L 6.5986328125 3 L 5.587417125701904 5.385893821716309 L 3 5.605410575866699 L 4.964853286743164 7.307563781738281 L 4.374677658081055 9.83740234375 L 6.5986328125 8.495112419128418 Z">
+						</path>
+					</svg>
+					<svg class="popup_store_Icon_material-star_ba" viewBox="3 3 7.197 6.837">
+						<path id="popup_store_Icon_material-star_ba"
+							d="M 6.5986328125 8.495112419128418 L 8.822587966918945 9.83740234375 L 8.232412338256836 7.307563781738281 L 10.197265625 5.605410575866699 L 7.609848976135254 5.385893821716309 L 6.5986328125 3 L 5.587417125701904 5.385893821716309 L 3 5.605410575866699 L 4.964853286743164 7.307563781738281 L 4.374677658081055 9.83740234375 L 6.5986328125 8.495112419128418 Z">
+						</path>
+					</svg>
+					<svg class="popup_store_Icon_material-star_bb" viewBox="3 3 7.197 6.837">
+						<path id="popup_store_Icon_material-star_bb"
+							d="M 6.5986328125 8.495112419128418 L 8.822587966918945 9.83740234375 L 8.232412338256836 7.307563781738281 L 10.197265625 5.605410575866699 L 7.609848976135254 5.385893821716309 L 6.5986328125 3 L 5.587417125701904 5.385893821716309 L 3 5.605410575866699 L 4.964853286743164 7.307563781738281 L 4.374677658081055 9.83740234375 L 6.5986328125 8.495112419128418 Z">
+						</path>
+					</svg>
+					<svg class="popup_store_Icon_material-star-half" viewBox="3 3 7.197 6.837">
+						<path id="popup_store_Icon_material-star-half"
+							d="M 10.197265625 5.605410099029541 L 7.609848976135254 5.382294178009033 L 6.5986328125 3.000000238418579 L 5.587417125701904 5.38589334487915 L 3.000000238418579 5.605410099029541 L 4.964853763580322 7.307563781738281 L 4.374677181243896 9.83740234375 L 6.5986328125 8.495112419128418 L 8.822587966918945 9.83740234375 L 8.236011505126953 7.307563781738281 L 10.197265625 5.605410099029541 Z M 6.5986328125 7.82216739654541 L 6.5986328125 4.475439071655273 L 7.213999271392822 5.929286479949951 L 8.790201187133789 6.06603479385376 L 7.595454216003418 7.10244083404541 L 7.955317497253418 8.642655372619629 L 6.5986328125 7.82216739654541 Z">
+						</path>
+					</svg>
+				</div>
+				<div id="popup_store_Trn_Thin_Qu">
+					<span>Trần Thiên Quý</span>
+				</div>
+				<div id="popup_store_Qun_d_thng_phng_hp_rng_nhn_vin">
+					<span>Quán dễ thương, phòng họp rộng, nhân viên nhiệt tình</span>
+				</div>
+				<div id="popup_store_ID1000_am-_Th_7_1052021">
+					<span>10:00 am- Thứ 7 (10/5/2021)</span>
+				</div>
+			</div>
+			<div id="popup_store_History1">
+				<svg class="popup_store_Rectangle_144_">
+					<rect id="popup_store_Rectangle_144_" rx="9" ry="9" x="0" y="0" width="447" height="72">
+					</rect>
+				</svg>
+				<img id="popup_store_cafe8_" src="assets/cafe8_.png">
+
+				<div id="popup_store_start_ba">
+					<svg class="popup_store_Icon_material-star_bc" viewBox="3 3 7.197 6.837">
+						<path id="popup_store_Icon_material-star_bc"
+							d="M 6.5986328125 8.495112419128418 L 8.822587966918945 9.83740234375 L 8.232412338256836 7.307563781738281 L 10.197265625 5.605410575866699 L 7.609848976135254 5.385893821716309 L 6.5986328125 3 L 5.587417125701904 5.385893821716309 L 3 5.605410575866699 L 4.964853286743164 7.307563781738281 L 4.374677658081055 9.83740234375 L 6.5986328125 8.495112419128418 Z">
+						</path>
+					</svg>
+					<svg class="popup_store_Icon_material-star_bd" viewBox="3 3 7.197 6.837">
+						<path id="popup_store_Icon_material-star_bd"
+							d="M 6.5986328125 8.495112419128418 L 8.822587966918945 9.83740234375 L 8.232412338256836 7.307563781738281 L 10.197265625 5.605410575866699 L 7.609848976135254 5.385893821716309 L 6.5986328125 3 L 5.587417125701904 5.385893821716309 L 3 5.605410575866699 L 4.964853286743164 7.307563781738281 L 4.374677658081055 9.83740234375 L 6.5986328125 8.495112419128418 Z">
+						</path>
+					</svg>
+					<svg class="popup_store_Icon_material-star_be" viewBox="3 3 7.197 6.837">
+						<path id="popup_store_Icon_material-star_be"
+							d="M 6.5986328125 8.495112419128418 L 8.822587966918945 9.83740234375 L 8.232412338256836 7.307563781738281 L 10.197265625 5.605410575866699 L 7.609848976135254 5.385893821716309 L 6.5986328125 3 L 5.587417125701904 5.385893821716309 L 3 5.605410575866699 L 4.964853286743164 7.307563781738281 L 4.374677658081055 9.83740234375 L 6.5986328125 8.495112419128418 Z">
+						</path>
+					</svg>
+					<svg class="popup_store_Icon_material-star_bf" viewBox="3 3 7.197 6.837">
+						<path id="popup_store_Icon_material-star_bf"
+							d="M 6.5986328125 8.495112419128418 L 8.822587966918945 9.83740234375 L 8.232412338256836 7.307563781738281 L 10.197265625 5.605410575866699 L 7.609848976135254 5.385893821716309 L 6.5986328125 3 L 5.587417125701904 5.385893821716309 L 3 5.605410575866699 L 4.964853286743164 7.307563781738281 L 4.374677658081055 9.83740234375 L 6.5986328125 8.495112419128418 Z">
+						</path>
+					</svg>
+					<svg class="popup_store_Icon_material-star-half_bf" viewBox="3 3 7.197 6.837">
+						<path id="popup_store_Icon_material-star-half_bf"
+							d="M 10.197265625 5.605410099029541 L 7.609848976135254 5.382294178009033 L 6.5986328125 3.000000238418579 L 5.587417125701904 5.38589334487915 L 3.000000238418579 5.605410099029541 L 4.964853763580322 7.307563781738281 L 4.374677181243896 9.83740234375 L 6.5986328125 8.495112419128418 L 8.822587966918945 9.83740234375 L 8.236011505126953 7.307563781738281 L 10.197265625 5.605410099029541 Z M 6.5986328125 7.82216739654541 L 6.5986328125 4.475439071655273 L 7.213999271392822 5.929286479949951 L 8.790201187133789 6.06603479385376 L 7.595454216003418 7.10244083404541 L 7.955317497253418 8.642655372619629 L 6.5986328125 7.82216739654541 Z">
+						</path>
+					</svg>
+				</div>
+				<div id="popup_store_Nguyn_Vn_Quang">
+					<span>Nguyễn Văn Quang</span>
+				</div>
+				<div id="popup_store_Qun_p_khng_gia_thong__nhn_vin_">
+					<span>Quán đẹp, không gia thoáng , nhân viên hòa đồng</span>
+				</div>
+				<div id="popup_store_ID2000_pm-_Th_3_2152021">
+					<span>20:00 pm- Thứ 3 (21/5/2021)</span>
+				</div>
+			</div>
+			<div id="popup_store_UserInfo">
+				<div id="popup_store_Qun">
+					<span>(Quán)</span>
+				</div>
+				<div id="popup_store_S_in_thoi">
+					<span>Số điện thoại:</span>
+				</div>
+				<div id="popup_store_Lt_booking">
+					<span>Lượt booking:</span>
+				</div>
+				<div id="popup_store_nh_gi_khch_hng">
+					<span>Đánh giá khách hàng:</span>
+				</div>
+				<svg class="popup_store_startIcon" viewBox="3 3 10.334 9.818">
+					<path id="popup_store_startIcon"
+						d="M 8.167236328125 10.8903694152832 L 11.36058807373047 12.8177490234375 L 10.51316165924072 9.185182571411133 L 13.33447265625 6.741079330444336 L 9.619230270385742 6.425877571105957 L 8.167236328125 2.999999523162842 L 6.715242862701416 6.425877571105957 L 2.999999523162842 6.741079330444336 L 5.821310520172119 9.185182571411133 L 4.973883628845215 12.8177490234375 L 8.167236328125 10.8903694152832 Z">
+					</path>
+				</svg>
+				<div id="popup_store_ID">
+					<span>ID:</span>
+				</div>
+				<div id="popup_store_Name">
+					<span>Nguyễn Phương Tố Như</span>
+				</div>
+				<div id="popup_store_ID0978821134">
+					<span>0978821134</span>
+				</div>
+				<div id="popup_store_ID103_Lt">
+					<span>103 Lượt</span>
+				</div>
+				<div id="popup_store_ID45_">
+					<span>4.5 </span>
+				</div>
+				<div id="popup_store_ID03">
+					<span>03</span>
+				</div>
+				<div id="popup_store_UIContainersUser">
+					<svg class="popup_store_UIContainersUser_background">
+						<rect id="popup_store_UIContainersUser_background" rx="0" ry="0" x="0" y="0" width="59"
+							height="59">
+						</rect>
+					</svg>
+					<div id="popup_store_Oval">
+						<svg class="popup_store_Oval_by">
+							<ellipse id="popup_store_Oval_by" rx="29.5" ry="29.5" cx="29.5" cy="29.5">
+							</ellipse>
+						</svg>
+						<img id="popup_store_Oval_bz" src="assets/Oval_bz.png">
+
+					</div>
+				</div>
+			</div>
+			<img id="popup_store_Exitbtn1" src="assets/Exitbtn1.png">
+
+		</div>
+	</div>
+
+	<style type="text/css">
+		#popup_bg_store {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 30;
+			justify-content: center;
+			align-items: center;
+			background-color: rgba(0, 0, 0, 0.3);
+			display: none;
+		}
+
+		#popup_store_Popup-Shop {
+			position: absolute;
+			width: 1920px;
+			height: 1080px;
+			background-color: rgba(255, 255, 255, 1);
+			overflow: hidden;
+			--web-view-name: Popup-Shop;
+			--web-view-id: Popup-Shop;
+			--web-scale-on-resize: true;
+			--web-enable-deep-linking: true;
+		}
+
+		#popup_store_Popup_shop {
+			position: absolute;
+			width: 548px;
+			height: 527px;
+			left: 25px;
+			top: 13px;
+			overflow: visible;
+		}
+
+		#popup_store_bg {
+			fill: rgba(255, 255, 255, 1);
+		}
+
+		.popup_store_bg {
+			filter: drop-shadow(0px 5px 25px rgba(82, 87, 93, 0.102));
+			position: absolute;
+			overflow: visible;
+			width: 623px;
+			height: 602px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#popup_store_BgTable {
+			opacity: 0.5;
+			fill: rgba(227, 233, 239, 1);
+		}
+
+		.popup_store_BgTable {
+			position: absolute;
+			overflow: visible;
+			width: 493px;
+			height: 226px;
+			left: 28px;
+			top: 269px;
+		}
+
+		#popup_store_Title_Shop {
+			position: absolute;
+			width: 444.994px;
+			height: 39px;
+			left: 19.006px;
+			top: 25.5px;
+			overflow: visible;
+		}
+
+		#popup_store_Line {
+			fill: rgba(235, 242, 247, 1);
+		}
+
+		.popup_store_Line {
+			position: absolute;
+			overflow: visible;
+			width: 444.994px;
+			height: 3px;
+			left: 0px;
+			top: 36px;
+		}
+
+		#popup_store_THNG_TIN_USER {
+			left: 16.994px;
+			top: 0px;
+			position: absolute;
+			overflow: visible;
+			width: 265px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 24px;
+			color: rgba(51, 51, 51, 1);
+			letter-spacing: 0.3125px;
+		}
+
+		#popup_store_Status {
+			position: absolute;
+			width: 131px;
+			height: 39px;
+			left: 380px;
+			top: 176px;
+			overflow: visible;
+		}
+
+		#popup_store_Trng_thi {
+			left: 0px;
+			top: 0px;
+			position: absolute;
+			overflow: visible;
+			width: 71px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			color: rgba(5, 71, 136, 1);
+		}
+
+		#popup_store_Blockbtn {
+			position: absolute;
+			width: 102px;
+			height: 15px;
+			left: 0px;
+			top: 24px;
+			overflow: visible;
+		}
+
+		#popup_store_Rectangle_143 {
+			fill: rgba(223, 123, 9, 1);
+		}
+
+		.popup_store_Rectangle_143 {
+			position: absolute;
+			overflow: visible;
+			width: 102px;
+			height: 15px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#popup_store_Kha_ti_khon {
+			left: 18px;
+			top: 1px;
+			position: absolute;
+			overflow: visible;
+			width: 67px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 10px;
+			color: rgba(255, 255, 255, 1);
+		}
+
+		#popup_store_Hot_ng {
+			left: 75px;
+			top: 2px;
+			position: absolute;
+			overflow: visible;
+			width: 57px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			color: rgba(36, 159, 0, 1);
+		}
+
+		#popup_store_History2 {
+			position: absolute;
+			width: 447px;
+			height: 72px;
+			left: 56px;
+			top: 284px;
+			overflow: visible;
+		}
+
+		#popup_store_Rectangle_144 {
+			fill: rgba(255, 255, 255, 1);
+		}
+
+		.popup_store_Rectangle_144 {
+			filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+			position: absolute;
+			overflow: visible;
+			width: 465px;
+			height: 90px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#popup_store_cafe8 {
+			position: absolute;
+			width: 39px;
+			height: 39px;
+			left: 27px;
+			top: 5px;
+			overflow: visible;
+		}
+
+		#popup_store_start {
+			position: absolute;
+			width: 38.395px;
+			height: 6.837px;
+			left: 30.3px;
+			top: 61px;
+			overflow: visible;
+		}
+
+		#popup_store_Icon_material-star {
+			fill: rgba(255, 216, 20, 1);
+		}
+
+		.popup_store_Icon_material-star {
+			overflow: visible;
+			position: absolute;
+			width: 7.197px;
+			height: 6.837px;
+			left: 0px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#popup_store_Icon_material-star_ {
+			fill: rgba(255, 216, 20, 1);
+		}
+
+		.popup_store_Icon_material-star_ {
+			overflow: visible;
+			position: absolute;
+			width: 7.197px;
+			height: 6.837px;
+			left: 8px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#popup_store_Icon_material-star_ba {
+			fill: rgba(255, 216, 20, 1);
+		}
+
+		.popup_store_Icon_material-star_ba {
+			overflow: visible;
+			position: absolute;
+			width: 7.197px;
+			height: 6.837px;
+			left: 16px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#popup_store_Icon_material-star_bb {
+			fill: rgba(255, 216, 20, 1);
+		}
+
+		.popup_store_Icon_material-star_bb {
+			overflow: visible;
+			position: absolute;
+			width: 7.197px;
+			height: 6.837px;
+			left: 23.197px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#popup_store_Icon_material-star-half {
+			fill: rgba(255, 216, 20, 1);
+		}
+
+		.popup_store_Icon_material-star-half {
+			overflow: visible;
+			position: absolute;
+			width: 7.197px;
+			height: 6.837px;
+			left: 31.197px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#popup_store_Trn_Thin_Qu {
+			left: 13px;
+			top: 48px;
+			position: absolute;
+			overflow: visible;
+			width: 68px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 10px;
+			color: rgba(223, 123, 9, 1);
+		}
+
+		#popup_store_Qun_d_thng_phng_hp_rng_nhn_vin {
+			left: 97px;
+			top: 29px;
+			position: absolute;
+			overflow: visible;
+			width: 279px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: italic;
+			font-weight: normal;
+			font-size: 12px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_store_ID1000_am-_Th_7_1052021 {
+			left: 328px;
+			top: 57px;
+			position: absolute;
+			overflow: visible;
+			width: 115px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: italic;
+			font-weight: normal;
+			font-size: 9px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_store_History1 {
+			position: absolute;
+			width: 447px;
+			height: 72px;
+			left: 56px;
+			top: 374px;
+			overflow: visible;
+		}
+
+		#popup_store_Rectangle_144_ {
+			fill: rgba(255, 255, 255, 1);
+		}
+
+		.popup_store_Rectangle_144_ {
+			filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.161));
+			position: absolute;
+			overflow: visible;
+			width: 465px;
+			height: 90px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#popup_store_cafe8_ {
+			position: absolute;
+			width: 39px;
+			height: 39px;
+			left: 27px;
+			top: 5px;
+			overflow: visible;
+		}
+
+		#popup_store_start_ba {
+			position: absolute;
+			width: 38.395px;
+			height: 6.837px;
+			left: 30.3px;
+			top: 61px;
+			overflow: visible;
+		}
+
+		#popup_store_Icon_material-star_bc {
+			fill: rgba(255, 216, 20, 1);
+		}
+
+		.popup_store_Icon_material-star_bc {
+			overflow: visible;
+			position: absolute;
+			width: 7.197px;
+			height: 6.837px;
+			left: 0px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#popup_store_Icon_material-star_bd {
+			fill: rgba(255, 216, 20, 1);
+		}
+
+		.popup_store_Icon_material-star_bd {
+			overflow: visible;
+			position: absolute;
+			width: 7.197px;
+			height: 6.837px;
+			left: 8px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#popup_store_Icon_material-star_be {
+			fill: rgba(255, 216, 20, 1);
+		}
+
+		.popup_store_Icon_material-star_be {
+			overflow: visible;
+			position: absolute;
+			width: 7.197px;
+			height: 6.837px;
+			left: 16px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#popup_store_Icon_material-star_bf {
+			fill: rgba(255, 216, 20, 1);
+		}
+
+		.popup_store_Icon_material-star_bf {
+			overflow: visible;
+			position: absolute;
+			width: 7.197px;
+			height: 6.837px;
+			left: 23.197px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#popup_store_Icon_material-star-half_bf {
+			fill: rgba(255, 216, 20, 1);
+		}
+
+		.popup_store_Icon_material-star-half_bf {
+			overflow: visible;
+			position: absolute;
+			width: 7.197px;
+			height: 6.837px;
+			left: 31.197px;
+			top: 0px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#popup_store_Nguyn_Vn_Quang {
+			left: 8px;
+			top: 48px;
+			position: absolute;
+			overflow: visible;
+			width: 86px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 10px;
+			color: rgba(223, 123, 9, 1);
+		}
+
+		#popup_store_Qun_p_khng_gia_thong__nhn_vin_ {
+			left: 102px;
+			top: 29px;
+			position: absolute;
+			overflow: visible;
+			width: 257px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: italic;
+			font-weight: normal;
+			font-size: 12px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_store_ID2000_pm-_Th_3_2152021 {
+			left: 328px;
+			top: 57px;
+			position: absolute;
+			overflow: visible;
+			width: 115px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: italic;
+			font-weight: normal;
+			font-size: 9px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_store_UserInfo {
+			position: absolute;
+			width: 253.167px;
+			height: 167px;
+			left: 31px;
+			top: 87px;
+			overflow: visible;
+		}
+
+		#popup_store_Qun {
+			left: 69px;
+			top: 28px;
+			position: absolute;
+			overflow: visible;
+			width: 45px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: italic;
+			font-weight: normal;
+			font-size: 15px;
+			color: rgba(5, 71, 136, 1);
+		}
+
+		#popup_store_S_in_thoi {
+			left: 69px;
+			top: 94px;
+			position: absolute;
+			overflow: visible;
+			width: 93px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			color: rgba(5, 71, 136, 1);
+		}
+
+		#popup_store_Lt_booking {
+			left: 69px;
+			top: 121px;
+			position: absolute;
+			overflow: visible;
+			width: 94px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			color: rgba(5, 71, 136, 1);
+		}
+
+		#popup_store_nh_gi_khch_hng {
+			left: 68.832px;
+			top: 149px;
+			position: absolute;
+			overflow: visible;
+			width: 145px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			color: rgba(5, 71, 136, 1);
+		}
+
+		#popup_store_startIcon {
+			fill: rgba(255, 216, 20, 1);
+		}
+
+		.popup_store_startIcon {
+			overflow: visible;
+			position: absolute;
+			width: 10.334px;
+			height: 9.818px;
+			left: 242.832px;
+			top: 155px;
+			transform: matrix(1, 0, 0, 1, 0, 0);
+		}
+
+		#popup_store_ID {
+			left: 69px;
+			top: 66px;
+			position: absolute;
+			overflow: visible;
+			width: 19px;
+			white-space: nowrap;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 15px;
+			color: rgba(5, 71, 136, 1);
+		}
+
+		#popup_store_Name {
+			left: 71px;
+			top: 2px;
+			position: absolute;
+			overflow: visible;
+			width: 180px;
+			white-space: nowrap;
+			line-height: 22px;
+			margin-top: -3px;
+			text-align: left;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 16px;
+			color: rgba(82, 87, 93, 1);
+			letter-spacing: 0.3125px;
+		}
+
+		#popup_store_ID0978821134 {
+			left: 171px;
+			top: 96px;
+			position: absolute;
+			overflow: visible;
+			width: 69px;
+			white-space: nowrap;
+			line-height: 61px;
+			margin-top: -24.5px;
+			text-align: center;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_store_ID103_Lt {
+			left: 171px;
+			top: 123px;
+			position: absolute;
+			overflow: visible;
+			width: 49px;
+			white-space: nowrap;
+			line-height: 61px;
+			margin-top: -24.5px;
+			text-align: center;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_store_ID45_ {
+			left: 223.832px;
+			top: 153px;
+			position: absolute;
+			overflow: visible;
+			width: 21px;
+			white-space: nowrap;
+			line-height: 61px;
+			margin-top: -24.5px;
+			text-align: center;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_store_ID03 {
+			left: 170px;
+			top: 68px;
+			position: absolute;
+			overflow: visible;
+			width: 15px;
+			white-space: nowrap;
+			line-height: 61px;
+			margin-top: -24.5px;
+			text-align: center;
+			font-family: Roboto;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 12px;
+			color: rgba(179, 184, 189, 1);
+		}
+
+		#popup_store_UIContainersUser {
+			position: absolute;
+			width: 59px;
+			height: 59px;
+			left: 0px;
+			top: 0px;
+			overflow: visible;
+		}
+
+		#popup_store_UIContainersUser_background {
+			fill: rgba(0, 0, 0, 0);
+		}
+
+		.popup_store_UIContainersUser_background {
+			position: absolute;
+			overflow: visible;
+			width: 59px;
+			height: 59px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#popup_store_Oval {
+			position: absolute;
+			width: 59px;
+			height: 59px;
+			left: 0px;
+			top: 0px;
+			overflow: visible;
+		}
+
+		#popup_store_Oval_by {
+			fill: rgba(204, 204, 204, 1);
+		}
+
+		.popup_store_Oval_by {
+			position: absolute;
+			overflow: visible;
+			width: 59px;
+			height: 59px;
+			left: 0px;
+			top: 0px;
+		}
+
+		#popup_store_Oval_bz {
+			position: absolute;
+			width: 59px;
+			height: 59px;
+			left: 0px;
+			top: 0px;
+			overflow: visible;
+		}
+
+		#popup_store_Exitbtn1 {
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			left: 497px;
+			top: 15px;
+			overflow: visible;
+		}
+	</style>
+	<!-- het store -->
 </body>
 
 </html>
