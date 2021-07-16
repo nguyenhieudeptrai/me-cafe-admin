@@ -3592,7 +3592,7 @@
 						<span>Hoạt động</span>
 					</div>
 				</div>
-				<button  id="ViewBtn_dn" onclick="btnPopUpUser(1,'popup_bg_store')">
+				<button id="ViewBtn_dn" onclick="btnPopUpUser(1,'popup_bg_store')">
 					<svg class="Rectangle_143_do">
 						<rect id="Rectangle_143_do" rx="4" ry="4" x="0" y="0" width="72" height="20">
 						</rect>
@@ -5012,10 +5012,6 @@
 
 	<div id="popup_bg_store">
 		<div id="popup_store_Popup_shop">
-			<svg class="popup_store_popup_store_bg">
-				<rect id="popup_store_bg" rx="20" ry="20" x="0" y="0" width="548" height="527">
-				</rect>
-			</svg>
 			<svg class="popup_store_BgTable">
 				<rect id="popup_store_BgTable" rx="10" ry="10" x="0" y="0" width="493" height="226">
 				</rect>
@@ -5186,8 +5182,7 @@
 					</div>
 				</div>
 			</div>
-			<img id="popup_store_Exitbtn1" src="assets/Exitbtn1.png">
-
+			<img id="popup_store_Exitbtn1" src="assets/Exitbtn1.png" onclick="btnPopUpUser(0,'popup_bg_store')">
 		</div>
 	</div>
 
@@ -5203,25 +5198,15 @@
 			display: none;
 		}
 
-		#popup_store_Popup-Shop {
-			position: absolute;
-			width: 1920px;
-			height: 1080px;
-			background-color: rgba(255, 255, 255, 1);
-			overflow: hidden;
-			--web-view-name: Popup-Shop;
-			--web-view-id: Popup-Shop;
-			--web-scale-on-resize: true;
-			--web-enable-deep-linking: true;
-		}
-
 		#popup_store_Popup_shop {
 			position: absolute;
 			width: 548px;
 			height: 527px;
-			left: 25px;
-			top: 13px;
-			overflow: visible;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: rgba(255, 255, 255, 1);
+			border-radius: 30px;
 		}
 
 		#popup_store_bg {
